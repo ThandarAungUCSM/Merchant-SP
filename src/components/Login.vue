@@ -22,7 +22,7 @@
             <input class="text1" 
                     :type="passwordFieldType"
                     v-model="pass_word">
-            <b-img @click="switchVisibility(passwordFieldType)" src="/static/images/eye.png" class="eye-img" />
+            <b-img @click="switchVisibility" src="/static/images/eye.png" class="eye-img" />
         </b-col>
     </b-row>
     <b-row>
@@ -57,6 +57,9 @@ export default {
       };
   },
   methods: {
+        switchVisibility() {
+            this.passwordFieldType = this.passwordFieldType == 'password' ? 'text' : 'password'
+        },
       getConfigInfo() {
           this.$HTTP(this.$httpConfig.getHome, {
               token:sessionStorage.getItem("data_token")
@@ -127,13 +130,8 @@ export default {
                   console.log("console error " + err)
               });
           }
-      },  
-      switchVisibility(value) {
-          if(value) {
-              alert(value)
-          }
-        // this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password'
-      }  
+      }
+     
 }
 </script>
 

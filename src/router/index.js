@@ -6,6 +6,7 @@ import home from '@/components/home/home'
 import MyNew from '@/components/MyNew'
 import MyProfile from '@/components/MyProfile'
 import ChangeShopName from '@/components/ChangeShopName'
+import FindMyPassword from '@/components/FindMyPassword'
 
 Vue.use(Router)
 
@@ -38,6 +39,11 @@ const router = new Router({
             path: '/change-shop-name',
             name: 'ChangeShopName',
             component: ChangeShopName
+          },
+          {
+            path: '/find-password',
+            name: 'FindMyPassword',
+            component: FindMyPassword
           }
       ]
     }
