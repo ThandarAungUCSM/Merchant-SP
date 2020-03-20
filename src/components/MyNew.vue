@@ -1,18 +1,24 @@
 <template>
   <b-container class="my-new">
-    <b-row class="header-css">
-        <b-col>
-            <b-img src="/static/images/fanhui.png" class="header-img" />
-        </b-col>
-        <b-col><span class="">消息</span></b-col>
-        <b-col></b-col>
-    </b-row>
+    <commonHeader></commonHeader>
     <b-row class="header-css1">
-        <b-col>
-            订单消息                        
+        <b-col v-bind:class="[tabActive == 'tab1' ? 'tabActive' : 'tabNoA']" @click="tabClick('tab1')">
+            订单消息  
+            <div v-if="tabActive == 'tab1'" class="tabLine">
+                <div class="tablinein"></div>   
+            </div> 
+            <div v-else class="tabLine">
+                <div class="tablineinElse"></div>   
+            </div> 
         </b-col>
-        <b-col>
-            平台消息                 
+        <b-col v-bind:class="[tabActive == 'tab2' ? 'tabActive' : 'tabNoA']" @click="tabClick('tab2')">
+            平台消息
+            <div v-if="tabActive == 'tab2'" class="tabLine">
+                <div class="tablinein"></div>   
+            </div> 
+            <div v-else class="tabLine">
+                <div class="tablineinElse"></div>   
+            </div> 
         </b-col>
     </b-row>
     <b-row>
@@ -21,6 +27,7 @@
     <b-row class="text-center body-css" v-for="(i, index) in 7" :key="index">
         <b-col style="background: #FFF;">
             <b-img src="/static/images/Clip.png" class="row-img" />
+            <div class="circle" style="">2</div>
         </b-col>
         <b-col cols="9" class="row1-txt">
             <b-row class="row1-txt-inner">
@@ -32,11 +39,10 @@
             </b-row>
             <b-row>
                 <b-col class="horizontal-line"></b-col>
-                <!-- <h1>#EFEFEE</h1> -->
             </b-row>
         </b-col>
     </b-row>
-    <b-row class="footerCss">
+    <!-- <b-row class="footerCss">
       <b-col>
         <b-img src="/static/images/group.png" class="footerImg" alt="Transparent image"></b-img>       
         <p class="row3-p">首页</p>
@@ -49,17 +55,35 @@
         <b-img src="/static/images/group.png" class="footerImg" alt="Transparent image"></b-img>
         <p class="row3-p">我的 </p>
       </b-col> 
-    </b-row>
+    </b-row> -->
+    <div>
+        <commonFooter :bgcolor='myNew'> </commonFooter>
+    </div>
+    
   </b-container>
 </template>
 
 <script>
+import commonHeader from '@/common/header'
+import commonFooter from '@/common/footer'
 export default {
   name: 'MyNew',
   data () {
     return {
-      
+      tabActive: 'tab1',
+      myNew: 'myNew'
     }
+  },
+  components: {
+      commonHeader,
+      commonFooter
+  },
+  methods: {
+      tabClick(value) {
+          if(value) {
+              this.tabActive = value
+          }
+      }
   }
 }
 </script>
@@ -71,7 +95,7 @@ export default {
 
         }
         .header-css {
-            background: #46CEFE;
+            background-image: linear-gradient(to right, #4EBDFF, #6093FF);
             display: flex;
             align-items: center;
             padding-top: 10px;
@@ -89,8 +113,8 @@ export default {
             padding-top: 15px;
         }
         .header-img {
-            width: 20px;
-            height: 30px;
+            width: 0.5625rem;
+            height: 1.03125rem;
         }
         .row-img {
             width: 50px;
@@ -127,7 +151,42 @@ export default {
             height: 40px;
             margin-top: 0.5rem;
         }
-        
+        .tabActive {
+            color: #0FA9FE;
+        }
+        .tabNoA {
+            color: #333333;
+        }
+        .tabLine {
+            display: flex; 
+            justify-content: center; 
+        }
+        .tablinein {
+            background: #00A4FF; 
+            height: 3px; 
+            width: 65px;
+        }
+        .tablineinElse {
+            height: 3px; 
+            width: 65px;
+        }
+        .title-txt {
+            color: #FFF;
+            font-size: 1.03125rem;
+        }
+        .circle {
+            width: 20px; 
+            height: 20px; 
+            background: #F23B3C; 
+            border-radius: 10px; 
+            top: -8px;
+            position: absolute;
+            right: 6px;
+            color: #FFF;
+        }
+        .footerupdate {
+            background: lemonchiffon;
+        }
         
     }
   

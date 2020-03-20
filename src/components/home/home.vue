@@ -5,7 +5,7 @@
         <div class="title-bgcolor">
           <div class="title-row1">
             <b-img src="/static/images/group.png" class="title-img"/>
-            <span>小天鹅官方旗舰店</span>
+            <span class="title-size">小天鹅官方旗舰店</span>
             <b-img src="/static/images/shape605.png" class="scan-img"/>
           </div>
           <b-row class="title-row2">
@@ -29,39 +29,39 @@
         </div>
         <div class="row1">
           <b-row class="body-row1">
-            <b-img src="/static/images/Color Overlay.png" alt="Transparent image"></b-img>
+            <b-img src="/static/images/Color Overlay.png" class="left-img" alt="Transparent image"></b-img>
             <span class="vertical-line"></span>
-            <span>最新好消息商户助手正式开通</span>
+            <span class="right-txt">最新好消息商户助手正式开通</span>
           </b-row>
         </div>  
     </div>
 
     <div class="body-bgcolor">
       <div class="body-row2">
-        <b-row class="body-row2-title">经营功能</b-row>
+        <b-row class="body-row2-title title-group1">经营功能</b-row>
         <b-row>
           <b-col>
-            <b-img src="/static/images/group.png" style="width: 40px; height: 40px;" alt="Transparent image"></b-img>
+            <b-img src="/static/images/icon/shop.png" style="width: 40px; height: 40px;" alt="Transparent image"></b-img>
             <p>店铺</p>
           </b-col>  
           <b-col>
-            <b-img src="/static/images/group.png" style="width: 40px; height: 40px;" alt="Transparent image"></b-img>
+            <b-img src="/static/images/icon/product.png" style="width: 40px; height: 40px;" alt="Transparent image"></b-img>
             <p>商品</p>
           </b-col> 
           <b-col>
-            <b-img src="/static/images/group.png" style="width: 40px; height: 40px;" alt="Transparent image"></b-img>
+            <b-img src="/static/images/icon/order.png" style="width: 40px; height: 40px;" alt="Transparent image"></b-img>
             <p>订单</p>
           </b-col> 
           <b-col>
-            <b-img src="/static/images/group.png" style="width: 40px; height: 40px;" alt="Transparent image"></b-img>
+            <b-img src="/static/images/icon/fund.png" style="width: 40px; height: 40px;" alt="Transparent image"></b-img>
             <p>资金中心</p>
           </b-col> 
         </b-row>  
       </div>
       <div class="body-row3">
         <b-row class="body-row2-title">
-          <b-img src="/static/images/group.png" style="width: 20px; height: 20px;"></b-img>
-          店铺数据
+          <b-img src="/static/images/icon/shop-data.png" style="width: 20px; height: 20px;"></b-img>
+          <span  class="title-group2">店铺数据</span>
         </b-row>
         <b-row class="body-row3-row1">
           <b-col>
@@ -101,55 +101,48 @@
             <p>橱窗中</p>
           </b-col>
           <b-col col sm="4">
-              
           </b-col>
         </b-row>  
       </div>
     </div>
-    <b-row class="footerCss">
-      <b-col>
-        <b-img src="/static/images/group.png" class="footerImg" alt="Transparent image"></b-img>       
-        <p class="row3-p">首页</p>
-      </b-col> 
-      <b-col>
-        <b-img src="/static/images/group.png" class="footerImg" alt="Transparent image"></b-img>
-        <p class="row3-p">消息 </p>
-      </b-col>
-      <b-col>
-        <b-img src="/static/images/group.png" class="footerImg" alt="Transparent image"></b-img>
-        <p class="row3-p">我的 </p>
-      </b-col> 
-    </b-row>
+    <commonFooter> </commonFooter>
   </b-container>
 </template>
 
 <script>
+import commonFooter from '@/common/footer'
 export default {
-  name: 'Home',
+  name: 'home',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      homeData: ''
     }
-  }
+  },
+  components: {
+      commonFooter
+  },
+  created() {
+      this.getConfigInfo();
+  },
+  methods: {
+      getConfigInfo() {
+          this.$HTTP(this.$httpConfig.getHome, {
+              token:sessionStorage.getItem("data_token")
+          })
+          .then(res => {
+              this.homeData = res.data.data;
+              console.log("Home " + JSON.stringify(res.data.data));
+          })
+          .catch(err => {
+              console.error(err);
+          });
+      }
+  }  
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-/* h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-} */
 
 @media screen and (max-width: 767px) {
   .home {
@@ -159,7 +152,8 @@ a {
     max-height: 25.4375‬rem;
   }
   .title-bgcolor {
-      background: #46CEFE;
+      padding-top: 3rem;
+      background-image: linear-gradient(to right, #4DBEFF, #6093FF);           
       padding-bottom: 20px;
   }
   .title-row1 {
@@ -174,12 +168,12 @@ a {
     margin-right: 0px;
   }
   .title-img {
-    width: 5.25rem;
-    height: 5.25rem;
+    width: 2.625rem;
+    height: 2.625rem;
   }
   .scan-img {
-    width: 2.625‬rem;
-    height: 2.625rem;
+    width: 1.31rem;
+    height: 1.31rem;
   }
   .body-bgcolor {
     background: #F2F3F6;
@@ -209,7 +203,23 @@ a {
   }
   .vertical-line {
     height: 25px;
-    border: 1px solid;
+    border: 1px solid #DBD6D6;
+  }
+  .right-txt {
+    font-size: 0.9375rem;
+    color: #333333;
+    font-weight: bold;
+  }
+  .title-group1 {
+    font-size: 0.9375rem;
+    color: #333333;
+    font-weight: bold;
+    padding-bottom: 1rem;
+  }
+  .title-group2 {
+    font-size: 0.9375rem;
+    color: #333333;
+    font-weight: bold;
   }
   .body-row3 {
     background: #FFF;
@@ -228,19 +238,13 @@ a {
   .row1 {
     margin-top: -20px; 
   }
-  .footerCss {
-    background: #FFF;
-    margin-left: 0px;
-    margin-right: 0px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+ 
+  .title-size {
+    font-size: 1.0625‬rem;
   }
-  .footerImg {
-    width: 40px; 
-    height: 40px;
-    margin-top: 0.5rem;
+  .left-img {
+    width: 2.384rem;
+    height: 1rem;
   }
 }
 
