@@ -1,51 +1,28 @@
 <template>
   <b-container class="login">
-      <b-row class="header-css">
+    <b-row class="header-css">
         <b-col>
             <b-img src="/static/images/fanhui.png" class="header-img" />
         </b-col>
         <b-col><span class="">登录</span></b-col>
         <b-col></b-col>
-      </b-row>
-      <!-- <b-row>
-        <ul class="fl">
-            <li>
-                <span class="fl">账号</span>
-                <input
-                    type="text"
-                    v-model="user_name"
-                    placeholder="请输入关键字"
-                />
-            </li>
-            <li>
-                <span class="fl">密码</span>
-                <input
-                    type="password"
-                    v-model="pass_word"
-                    placeholder="请输入密码"
-                />
-            </li>
-            <div class="Login-button hand" @click="loginClick">立即登录</div>
-        </ul>
-      </b-row> -->
+    </b-row>
     <b-row class="user" >
         <b-col>
         <span class="username">输入账号</span>
-
         <input class="text" 
                 type="text"
                 v-model="user_name"
                 >
         </b-col>
     </b-row>
-
     <b-row class="pass">
         <b-col>
             <span class="password">密码</span>
             <input class="text1" 
-                    type="password"
+                    :type="passwordFieldType"
                     v-model="pass_word">
-            <b-img src="/static/images/eye.png" class="eye-img" />
+            <b-img @click="switchVisibility(passwordFieldType)" src="/static/images/eye.png" class="eye-img" />
         </b-col>
     </b-row>
     <b-row>
@@ -66,6 +43,7 @@ export default {
       pass_word: "",
       configInfo: [],
       token: "",
+      passwordFieldType: 'password'
     }
   },
   created() {
@@ -149,7 +127,13 @@ export default {
                   console.log("console error " + err)
               });
           }
-      }    
+      },  
+      switchVisibility(value) {
+          if(value) {
+              alert(value)
+          }
+        // this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password'
+      }  
 }
 </script>
 
