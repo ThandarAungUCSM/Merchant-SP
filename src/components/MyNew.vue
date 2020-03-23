@@ -21,27 +21,29 @@
             </div> 
         </b-col>
     </b-row>
-    <b-row>
+    <b-row class="row-horizontal-line">
         <b-col class="horizontal-line"></b-col>
     </b-row>
-    <b-row class="text-center body-css" v-for="(i, index) in 7" :key="index">
-        <b-col style="background: #FFF;">
-            <b-img src="/static/images/Clip.png" class="row-img" />
-            <div class="circle" style="">2</div>
-        </b-col>
-        <b-col cols="9" class="row1-txt">
-            <b-row class="row1-txt-inner">
-                <span>西西小公主</span>
-                <span>9月24日</span>
-            </b-row>
-            <b-row>
-                <span>我付款成功了，看一下什么时候可以来你...</span>
-            </b-row>
-            <b-row>
-                <b-col class="horizontal-line"></b-col>
-            </b-row>
-        </b-col>
-    </b-row>
+    <div class="divtopbot">
+        <b-row class="text-center body-css" v-for="(i, index) in 7" :key="index">
+            <b-col style="background: #FFF;">
+                <b-img src="/static/images/Clip.png" class="row-img" />
+                <div class="circle" style="">2</div>
+            </b-col>
+            <b-col cols="9" class="row1-txt">
+                <b-row class="row1-txt-inner">
+                    <span>西西小公主</span>
+                    <span>9月24日</span>
+                </b-row>
+                <b-row>
+                    <span>我付款成功了，看一下什么时候可以来你...</span>
+                </b-row>
+                <b-row>
+                    <b-col class="horizontal-line"></b-col>
+                </b-row>
+            </b-col>
+        </b-row>
+    </div>
     <!-- <b-row class="footerCss">
       <b-col>
         <b-img src="/static/images/group.png" class="footerImg" alt="Transparent image"></b-img>       
@@ -92,7 +94,7 @@ export default {
 
     @media screen and (max-width: 767px) {
         .my-new {
-
+            
         }
         .header-css {
             background-image: linear-gradient(to right, #4EBDFF, #6093FF);
@@ -106,10 +108,10 @@ export default {
             display: flex;
             align-items: center;
             padding-top: 10px;
-            padding-bottom: 10px;
+            /* padding-bottom: 10px; */
         }
         .body-css {
-            background: #FFF;
+            /* background: #FFF; */
             padding-top: 15px;
         }
         .header-img {
@@ -127,6 +129,13 @@ export default {
         .row1-txt-inner {
             display: flex; 
             justify-content: space-between;
+        }
+        .divtopbot {
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+        }
+        .row-horizontal-line {
+            background: #F0F0F0;
         }
         .horizontal-line {
             width: 100%; 

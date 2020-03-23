@@ -1,9 +1,9 @@
 <template>
   <b-container  class="shop-change">
-    <commonHeader :changeshop='changeshopname'></commonHeader>
+    <commonHeader :phoneNo='changephno'></commonHeader>
     <b-row class="shop-name">
         <b-col>
-          <input class="text" type="text" v-model="shopName" placeholder="小天鹅官方旗舰店">
+          <input class="text" type="number" v-model="phone" placeholder="18570623665">
         </b-col>
         <b-col class="ch-image">
             <b-img src="/static/images/exit.png" class="change-img" />
@@ -21,8 +21,8 @@ export default {
   name: 'ChangePhNo',
   data () {
     return {
-      shopName: '',
-      changeshopname: 'changeshopname'
+      phone: null,
+      changephno: 'changephno'
     }
   },
   components: {

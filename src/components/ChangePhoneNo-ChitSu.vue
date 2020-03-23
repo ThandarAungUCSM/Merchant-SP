@@ -1,14 +1,18 @@
 <template>
   <b-container  class="shop-change">
-    <commonHeader :changeshop='changeshopname'></commonHeader>
-    <b-row class="shop-name">
-        <b-col>
-          <input class="text" type="text" v-model="shopName" placeholder="小天鹅官方旗舰店">
-        </b-col>
-        <b-col class="ch-image">
-            <b-img src="/static/images/exit.png" class="change-img" />
-        </b-col>
+    <b-row class="change-shop">
+       <b-col>
+           <b-img src="/static/images/fanhui.png" class="header-img" />
+      </b-col>
+             <b-col><span class="">修改店铺名称</span></b-col>
+          <b-col></b-col>
     </b-row>
+         <b-row class="shop-name">
+              <b-col><span class="">小天鹅官方旗舰店</span></b-col>
+         <b-col class="ch-image">
+              <b-img src="/static/images/exit.png" class="change-img" />
+         </b-col>
+         </b-row>
     <b-row class="click-button">
       <button class="click-me">确定</button>
     </b-row>
@@ -16,17 +20,12 @@
 </template>
 
 <script>
-import commonHeader from "@/common/header"
 export default {
-  name: 'ChangePhNo',
+  name: 'ChangeShopName',
   data () {
     return {
-      shopName: '',
-      changeshopname: 'changeshopname'
+      
     }
-  },
-  components: {
-      commonHeader
   },
   created() {
       
@@ -86,13 +85,6 @@ export default {
         outline: none;
         padding-top: 15px;
         padding-bottom: 15px;
-
-      }
-      
-        .text {
-        border: none;
-        outline: none;
-        background: #FFF;
 
       }
 

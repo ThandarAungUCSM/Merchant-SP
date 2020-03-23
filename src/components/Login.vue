@@ -1,31 +1,39 @@
 <template>
-  <b-container class="login">
-    <b-row class="header-css">
+ <!-- class="login" -->
+  <b-container style="background: #F0F0F0;">
+    <!-- <b-row class="header-css">
         <b-col>
             <b-img src="/static/images/fanhui.png" class="header-img" />
         </b-col>
         <b-col><span class="">登录</span></b-col>
         <b-col></b-col>
-    </b-row>
+    </b-row> -->
+    <commonHeader :loginText="loginTxt"></commonHeader>
     <b-row class="user" >
-        <b-col>
-        <span class="username">输入账号</span>
-        <input class="text" 
+        <b-col class="left-col-pos1">
+            <span class="username">输入账号</span>
+            <input class="text" 
                 type="text"
                 v-model="user_name"
-                >
-        </b-col>
-    </b-row>
-    <b-row class="pass">
-        <b-col>
-            <span class="password">密码</span>
-            <input class="text1" 
-                    :type="passwordFieldType"
-                    v-model="pass_word">
-            <b-img @click="switchVisibility" src="/static/images/eye.png" class="eye-img" />
+            >
         </b-col>
     </b-row>
     <b-row>
+        <b-col class="hrcss"></b-col>
+    </b-row>
+    <b-row class="pass">
+        <b-col class="left-col-pos">
+            <span class="password">密码</span>
+            <input class="text1" 
+                :type="passwordFieldType"
+                v-model="pass_word">
+            <b-img @click="switchVisibility" :src="eyeimg" v-bind:class="[eyeimg == '/static/images/eye.png' ? 'eye-img' : 'openeye-img']" />
+        </b-col>
+    </b-row>
+    <b-row>
+        <b-col class="hrcss"></b-col>
+    </b-row>
+    <b-row class="forgetpwd">
         <b-col><span class="footer">忘记密码</span></b-col>
     </b-row>
     <b-row class="click">
@@ -35,6 +43,7 @@
 </template>
 
 <script>
+import commonHeader from '@/common/header'
 export default {
   name: 'Login',
   data () {
@@ -43,8 +52,13 @@ export default {
       pass_word: "",
       configInfo: [],
       token: "",
-      passwordFieldType: 'password'
+      passwordFieldType: 'password',
+      eyeimg: '/static/images/eye.png',
+      loginTxt: 'loginTxt'
     }
+  },
+  components: {
+    commonHeader
   },
   created() {
       this.getConfigInfo();
@@ -59,6 +73,7 @@ export default {
   methods: {
         switchVisibility() {
             this.passwordFieldType = this.passwordFieldType == 'password' ? 'text' : 'password'
+            this.eyeimg = this.eyeimg == '/static/images/eye.png' ? '/static/images/open-eye.png' : '/static/images/eye.png'
         },
       getConfigInfo() {
           this.$HTTP(this.$httpConfig.getHome, {
@@ -137,81 +152,98 @@ export default {
 
 <style scoped>
     @media screen and (max-width: 767px) {
-        .login {
+        /* .login {
 
-        }
-        .header-css {
+        } */
+        /* .header-css {
             background: cyan;
             display: flex;
             align-items: center;
             padding-top: 10px;
             padding-bottom: 10px;
-        }
-        .header-img {
+        } */
+        /* .header-img {
             width: 20px;
             height: 30px;
-        }
+        } */
 
         .user{
-          font-size: 13px;
-          padding-top: 15px;
-          padding-bottom: 15px;
-          border-bottom: .01rem solid #D1D7DC;
-
-          }
+            font-size: 13px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            /* border-bottom: .01rem solid #D1D7DC; */
+            padding: 1rem;
+        }
+        .pass{
+            font-size: 13px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            /* border-bottom: .01rem solid #D1D7DC; */
+            padding: 1rem;
+        }
         .username{
-          color: #707070;
-          margin:0 1.3rem 0 0;
-          font-size: 15px;
+            color: #707070;
+            margin-right: 1.7rem;
+            font-size: 15px;
         }
 
         .text {
-        border: none;
-        outline: none;
-        background:#F0F0F0;
-
-      }
-        .pass{
-        font-size: 13px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        border-bottom: .01rem solid #D1D7DC;
-      }
+            border: none;
+            outline: none;
+            background:#F0F0F0;
+        }
+        
         .password{
-          color: #707070;
-          margin:0 0 0 3rem;
-          font-size: 15px;
-
+            color: #707070;
+            font-size: 15px;
         }
        .text1{
-        border: none;
-        outline: none;
-        margin:0 0 0 3rem;
-        background:#F0F0F0;
-
-      }
+            border: none;
+            outline: none;
+            background:#F0F0F0;
+        }
         .eye-img{
-          height:10px;
-          margin-left:1.5rem;
+            height: 10px;
+            margin-left:1.5rem;
+        }
+        .openeye-img {
+            height: 30px; 
+            margin-left:1.5rem; 
         }
         .footer {
-          color: #707070;
-          float: right;
+            color: #000;
+            float: right;
         }
 
         .click{
-         background:#f1f1f1;
-         padding-top: 18px;
-         margin-left: 10px;
-         margin-right:10px;
-       }
-      .click-me{
-        font-size: 20px;
-        color: #707070;
-        border: none;
-        background: #23B8FF;
-        width: 100%;
-        outline: none;
-      }
+            background:#f1f1f1;
+            margin: 0px 10px 0px 10px;
+        }
+        .click-me{
+            font-size: 20px;
+            color: #707070;
+            border: none;
+            background: #23B8FF;
+            width: 100%;
+            outline: none;
+            padding: 1rem 0rem 1rem 0rem;
+            border-radius: 3px;
+            color: #66CDFF;
+        }
+        .forgetpwd {
+            padding: 2rem 0rem 1rem 0rem;
+        }
+        .left-col-pos1 {
+            text-align: left;
+        }
+        .left-col-pos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .hrcss {
+            border: 1px solid #EAEAE9; 
+            margin: 0 30px 0 30px;
+        }
     }
 </style>

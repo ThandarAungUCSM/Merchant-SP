@@ -1,9 +1,14 @@
 <template>
     <b-row class="header-css">
-        <b-col>
+        <b-col class="left-arrow-pos">
             <b-img src="/static/images/fanhui.png" class="header-img" />
         </b-col>
-        <b-col><span class="title-txt">消息</span></b-col>
+        <b-col>
+            <span class="title-txt" v-if="phoneNo == 'changephno' || changeshop == 'changeshopname'">修改手机号</span>
+            <span class="title-txt" v-else-if="findPassword == 'findPwd'">找回密码</span>
+            <span class="title-txt" v-else-if="loginText == 'loginTxt'" style="font-size: 1.125‬rem;">登录</span>
+            <span class="title-txt" v-else>消息</span>
+        </b-col>
         <b-col></b-col>
     </b-row>
 </template>
@@ -13,6 +18,12 @@ export default {
         return {
             
         }
+    },
+    props: {
+        phoneNo: '',
+        changeshop: '',
+        findPassword: '',
+        loginText: ''
     }
 }
 </script>
@@ -33,5 +44,8 @@ export default {
     .title-txt {
         color: #FFF;
         font-size: 1.03125rem;
+    }
+    .left-arrow-pos {
+        text-align: left;
     }
 </style>

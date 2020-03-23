@@ -1,5 +1,6 @@
 <template>
   <b-container class="home">
+    
     <div style="position: relative;">
         <div class="title-bgcolor">
           <div class="title-row1">
@@ -26,13 +27,13 @@
             </b-col>
           </b-row>
         </div>
-        <div class="row1"  style="height: 0px;">
+        <div class="row1">
           <b-row class="body-row1">
             <b-img src="/static/images/Color Overlay.png" class="left-img" alt="Transparent image"></b-img>
             <span class="vertical-line"></span>
             <span class="right-txt">最新好消息商户助手正式开通</span>
           </b-row>
-        </div> 
+        </div>  
     </div>
 
     <div class="body-bgcolor">
@@ -65,46 +66,46 @@
         <b-row class="body-row3-row1">
           <b-col>
             <p class="row3-p">0</p>
-            <p class="row3-p">今日订单数</p>
+            <p>今日订单数</p>
           </b-col>  
           <b-col>
             <p class="row3-p">0</p>
-            <p class="row3-p">退款中</p>
+            <p>退款中</p>
           </b-col> 
           <b-col>
             <p class="row3-p">0</p>
-            <p class="row3-p">待付款</p>
+            <p>待付款</p>
           </b-col> 
         </b-row>
         <b-row class="body-row3-row1">
           <b-col>
             <p class="row3-p">0</p>
-            <p class="row3-p">待发 货</p>
+            <p>待发 货</p>
           </b-col>  
           <b-col>
             <p class="row3-p">0</p>
-            <p class="row3-p">昨日总访客</p>
+            <p>昨日总访客</p>
           </b-col> 
           <b-col>
             <p class="row3-p">0</p>
-            <p class="row3-p">昨日成交金额</p>
+            <p>昨日成交金额</p>
           </b-col> 
         </b-row>  
         <b-row class="body-row3-row1">
           <b-col col sm="4">
             <p class="row3-p">0</p>
-            <p class="row3-p">出售中</p>
+            <p>出售中</p>
           </b-col> 
           <b-col col sm="4">
             <p class="row3-p">0</p>
-            <p class="row3-p">橱窗中</p>
+            <p>橱窗中</p>
           </b-col>
           <b-col col sm="4">
           </b-col>
         </b-row>  
       </div>
     </div>
-    <commonFooter :homeFooter = 'footerProp'> </commonFooter>
+    <commonFooter> </commonFooter>
   </b-container>
 </template>
 
@@ -114,8 +115,7 @@ export default {
   name: 'home',
   data () {
     return {
-      homeData: '',
-      footerProp: 'footerProp'
+      homeData: ''
     }
   },
   components: {
@@ -152,19 +152,20 @@ export default {
     max-height: 25.4375‬rem;
   }
   .title-bgcolor {
-    padding-top: 3rem;
-    background-image: linear-gradient(to right, #4DBEFF, #6093FF);           
-    padding-bottom: 20px;
+      padding-top: 3rem;
+      background-image: linear-gradient(to right, #4DBEFF, #6093FF);           
+      padding-bottom: 20px;
   }
   .title-row1 {
     display: flex;
-    padding: 1rem 13px 1rem 13px;
+    padding-left: 10px;
+    padding-right: 10px;
     align-items: center;
     justify-content: space-between;
   }
   .title-row2 {
-    margin: 0 1rem 0 1rem;
-    color: #FFF;
+    margin-left: 0px; 
+    margin-right: 0px;
   }
   .title-img {
     width: 2.625rem;
@@ -175,17 +176,14 @@ export default {
     height: 1.31rem;
   }
   .body-bgcolor {
-    padding-top: 10px;
     background: #F2F3F6;
-
-    padding-top: 65px;
   }
   
   .body-row1 {
     background: #FFF;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     padding: 15px 15px 15px 15px;
     margin-left: 15px;
     margin-right: 15px;
@@ -205,8 +203,7 @@ export default {
   }
   .vertical-line {
     height: 25px;
-    border: 0.5px solid #DBD6D6;
-    margin-right: 1rem;
+    border: 1px solid #DBD6D6;
   }
   .right-txt {
     font-size: 0.9375rem;
@@ -243,13 +240,11 @@ export default {
   }
  
   .title-size {
-    font-size: 1.0625rem;
-    color: #FFF;
+    font-size: 1.0625‬rem;
   }
   .left-img {
     width: 2.384rem;
     height: 1rem;
-    margin-right: 1rem;
   }
 }
 

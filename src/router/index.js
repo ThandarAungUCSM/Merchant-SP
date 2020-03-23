@@ -5,8 +5,10 @@ import Login from '@/components/Login'
 import home from '@/components/home/home'
 import MyNew from '@/components/MyNew'
 import MyProfile from '@/components/MyProfile'
+import ChangePhoneNo from '@/components/ChangePhoneNo'
 import ChangeShopName from '@/components/ChangeShopName'
 import FindMyPassword from '@/components/FindMyPassword'
+import Profile from '@/components/Profile'
 
 Vue.use(Router)
 
@@ -36,6 +38,11 @@ const router = new Router({
             component: MyProfile
           },
           {
+            path: '/change-ph-no',
+            name: 'ChangePhoneNo',
+            component: ChangePhoneNo
+          },
+          {
             path: '/change-shop-name',
             name: 'ChangeShopName',
             component: ChangeShopName
@@ -44,7 +51,13 @@ const router = new Router({
             path: '/find-password',
             name: 'FindMyPassword',
             component: FindMyPassword
+          },
+          {
+            path: '/profile',
+            name: 'Profile',
+            component: Profile
           }
+          
       ]
     }
   ]

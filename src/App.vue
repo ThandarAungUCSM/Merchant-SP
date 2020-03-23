@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="app-bg">
+  <div id="app">
     <router-view/>
   </div>
 </template>
@@ -35,10 +35,7 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
+    /* background: #F0F0F0; */
     /* margin-top: 60px; */
-  }
-  .app-bg {
-    /* min-height: 730px; */
-    background: #F0F0F0;
   }
 </style>

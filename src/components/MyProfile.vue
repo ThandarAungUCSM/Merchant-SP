@@ -1,6 +1,6 @@
 <template>
   <b-container class="my-profile">
-    <div style="position: relative;">
+    <div style="position: relative;" >
         <div class="title-bgcolor">
           <div class="title-row1">
             
@@ -9,7 +9,7 @@
             
           </b-row>
         </div>
-        <div class="row1">
+        <div class="row1" style="height: 0px;">
             <b-row class="body-row1">
                 <b-col>
                     <b-img src="/static/images/椭圆 1.png" class="profile-title-img" alt=""></b-img>
@@ -24,84 +24,109 @@
             </b-row>
         </div>  
     </div>
- <!-- v-for="i in 4" :key="i" -->
-    <b-row class="rowImg">
-        <b-col cols="5" class="rowcol3">
-            <b-img src="/static/images/daifukuan.png" class="row-img1" />
-            <span class="fontsizeTxt">待付款</span>
-        </b-col>
-        <b-col cols="7" class="rightcol" style="text-align: right;">
-            <b-img src="/static/images/图层 68 副本 3.png" class="row-img2" />
-        </b-col>
-    </b-row>
-    <b-row class="rowImg">
-        <b-col cols="5" class="rowcol3">
-            <b-img src="/static/images/msg.png" class="row-img1" />
-            <span class="fontsizeTxt">待发货</span>
-        </b-col>
-        <b-col cols="7" class="rightcol" style="text-align: right;">
-            <b-img src="/static/images/图层 68 副本 3.png" class="row-img2" />
-        </b-col>
-    </b-row>
-    <b-row class="rowImg">
-        <b-col cols="5" class="rowcol3">
-            <b-img src="/static/images/tuikuan.png" class="row-img1" />
-            <span class="fontsizeTxt">退款售后</span>
-        </b-col>
-        <b-col cols="7" class="rightcol" style="text-align: right;">
-            <b-img src="/static/images/图层 68 副本 3.png" class="row-img2" />
-        </b-col>
-    </b-row>
-    <b-row class="rowImg">
-        <b-col cols="5" class="rowcol3">
-            <b-img src="/static/images/商品管理.png" class="row-img1" />
-            <span class="fontsizeTxt">商品管理</span>
-        </b-col>
-        <b-col cols="7" class="rightcol" style="text-align: right;">
-            <b-img src="/static/images/图层 68 副本 3.png" class="row-img2" />
-        </b-col>
-    </b-row>
-    <b-row class="" style="padding-bottom: 12px; margin-left: 0px; margin-right: 0px;">
-    </b-row>
+    <div class="body-bgcolor">
+        <!-- v-for="i in 4" :key="i" -->
+        <b-row class="rowImg">
+            <b-col cols="5" class="rowcol3">
+                <b-img src="/static/images/daifukuan.png" class="row-img1" />
+                <span class="fontsizeTxt">待付款</span>
+            </b-col>
+            <b-col cols="7" class="rightcol" style="text-align: right;">
+                <b-img src="/static/images/图层 68 副本 3.png" class="row-img2" />
+            </b-col>
+        </b-row>
+        <b-row class="rowImgv-line">
+            <b-col cols="12" class="rowcol3" >
+                <div style="border: 0.5px solid #F6F6F6;"></div>
+            </b-col>
+        </b-row>
+        <b-row class="rowImg">
+            <b-col cols="5" class="rowcol3">
+                <b-img src="/static/images/msg.png" class="row-img1" />
+                <span class="fontsizeTxt">待发货</span>
+            </b-col>
+            <b-col cols="7" class="rightcol" style="text-align: right;">
+                <b-img src="/static/images/图层 68 副本 3.png" class="row-img2" />
+            </b-col>
+        </b-row>
+        <b-row class="rowImgv-line">
+            <b-col cols="12" class="rowcol3" >
+                <div style="border: 0.5px solid #F6F6F6;"></div>
+            </b-col>
+        </b-row>
+        <b-row class="rowImg">
+            <b-col cols="5" class="rowcol3">
+                <b-img src="/static/images/tuikuan.png" class="row-img1" />
+                <span class="fontsizeTxt">退款售后</span>
+            </b-col>
+            <b-col cols="7" class="rightcol" style="text-align: right;">
+                <b-img src="/static/images/图层 68 副本 3.png" class="row-img2" />
+            </b-col>
+        </b-row>
+        <b-row class="rowImgv-line">
+            <b-col cols="12" class="rowcol3" >
+                <div style="border: 0.5px solid #F6F6F6;"></div>
+            </b-col>
+        </b-row>
+        <b-row class="rowImg">
+            <b-col cols="5" class="rowcol3">
+                <b-img src="/static/images/商品管理.png" class="row-img1" />
+                <span class="fontsizeTxt">商品管理</span>
+            </b-col>
+            <b-col cols="7" class="rightcol" style="text-align: right;">
+                <b-img src="/static/images/图层 68 副本 3.png" class="row-img2" />
+            </b-col>
+        </b-row>
+        <b-row class="" style="padding-bottom: 12px; margin-left: 0px; margin-right: 0px;">
+        </b-row>
 
-<!-- v-for="i in 2" :key="i" -->
-    <b-row class="row2" >
-        <b-col cols="5" class="rowcol3">
-            <b-img src="/static/images/形状 616.png" class="row-img1" />
-            <span class="fontsizeTxt">今日成交额</span>
-        </b-col>
-        <b-col cols="7" class="rightcol" style="text-align: right;">
-            <b-img src="/static/images/图层 68 副本 3.png" class="row-img2" />
-        </b-col>
-    </b-row>
-    <b-row class="row2" >
-        <b-col cols="5" class="rowcol3">
-            <b-img src="/static/images/形状 617.png" class="row-img1" />
-            <span class="fontsizeTxt">今日访客数</span>
-        </b-col>
-        <b-col cols="7" class="rightcol" style="text-align: right;">
-            <b-img src="/static/images/图层 68 副本 3.png" class="row-img2" />
-        </b-col>
-    </b-row>
+        <!-- v-for="i in 2" :key="i" -->
+        <b-row class="row2" >
+            <b-col cols="5" class="rowcol3">
+                <b-img src="/static/images/形状 616.png" class="row-img1" />
+                <span class="fontsizeTxt">今日成交额</span>
+            </b-col>
+            <b-col cols="7" class="rightcol" style="text-align: right;">
+                <b-img src="/static/images/图层 68 副本 3.png" class="row-img2" />
+            </b-col>
+        </b-row>
+        <b-row class="rowImgv-line">
+            <b-col cols="12" class="rowcol3" >
+                <div style="border: 0.5px solid #F6F6F6;"></div>
+            </b-col>
+        </b-row>
+        <b-row class="row2" >
+            <b-col cols="5" class="rowcol3">
+                <b-img src="/static/images/形状 617.png" class="row-img1" />
+                <span class="fontsizeTxt">今日访客数</span>
+            </b-col>
+            <b-col cols="7" class="rightcol" style="text-align: right;">
+                <b-img src="/static/images/图层 68 副本 3.png" class="row-img2" />
+            </b-col>
+        </b-row>
 
-    <b-row class="row2" style="margin-top: 12px;">
-        <b-col cols="5" class="rowcol3">
-            <b-img src="/static/images/形状 618.png" class="row-img1" />
-            <span class="fontsizeTxt">我的发货地址</span>
-        </b-col>
-        <b-col cols="7" class="rightcol" style="text-align: right;">
-            <b-img src="/static/images/图层 68 副本 3.png" class="row-img2" />
-        </b-col>
-    </b-row>
+        <b-row class="row2" style="margin-top: 12px;">
+            <b-col cols="5" class="rowcol3">
+                <b-img src="/static/images/形状 618.png" class="row-img1" />
+                <span class="fontsizeTxt">我的发货地址</span>
+            </b-col>
+            <b-col cols="7" class="rightcol" style="text-align: right;">
+                <b-img src="/static/images/图层 68 副本 3.png" class="row-img2" />
+            </b-col>
+        </b-row>
 
-    <b-row class="row2 btncss" style="">
-        <b-col>
-            退出登录
-        </b-col>
-    </b-row>
+        <b-row class="row2 btncss" style="">
+            <b-col>
+                退出登录
+            </b-col>
+        </b-row>
+    </div>
+ 
 
-    <b-row class="row2" style="margin-top: 150px; "></b-row>
-    <commonFooter> </commonFooter>
+    
+
+    <!-- <b-row class="row2" style="margin-top: 150px; "></b-row> -->
+    <commonFooter :profileData = "propProfile"> </commonFooter>
     <!-- <b-row class="footerCss">
       <b-col>
         <b-img src="/static/images/home.png" class="footerImg" alt="Transparent image"></b-img>       
@@ -125,7 +150,7 @@ export default {
   name: 'MyProfile',
   data () {
     return {
-      
+      propProfile: 'propProfile'
     }
   },
   components: {
@@ -137,6 +162,7 @@ export default {
 <style scoped>
 
     @media screen and (max-width: 767px) {
+        
         .row2 {
             background: #FFF;
             margin-right: 0px;
@@ -175,6 +201,11 @@ export default {
             margin-left: 0px;
             padding-top: 15px;
             padding-bottom: 15px;
+        }
+        .rowImgv-line {
+            background: #FFF;
+            margin-right: 0px;
+            margin-left: 0px;
         }
         .row-img1 {
             width: 1.125rem;
@@ -226,7 +257,8 @@ export default {
             height: 2.625rem;
         }
         .body-bgcolor {
-            background: #707070;
+            background: #F2F3F6;
+            padding-top: 90px;
         }
 
         .row1 {
