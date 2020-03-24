@@ -64,40 +64,40 @@
         </b-row>
         <b-row class="body-row3-row1">
           <b-col>
-            <p class="row3-p">0</p>
+            <p class="row3-p">{{this.homeData.userToday}}</p>
             <p class="row3-p">今日订单数</p>
           </b-col>  
           <b-col>
-            <p class="row3-p">0</p>
+            <p class="row3-p">{{this.homeData.order.refunds}}</p>
             <p class="row3-p">退款中</p>
           </b-col> 
           <b-col>
-            <p class="row3-p">0</p>
+            <p class="row3-p">{{this.homeData.order.pendingPayment}}</p>
             <p class="row3-p">待付款</p>
           </b-col> 
         </b-row>
         <b-row class="body-row3-row1">
           <b-col>
-            <p class="row3-p">0</p>
+            <p class="row3-p">{{this.homeData.order.pendingDelivery}}</p>
             <p class="row3-p">待发 货</p>
           </b-col>  
           <b-col>
-            <p class="row3-p">0</p>
-            <p class="row3-p">昨日总访客</p>
+            <p class="row3-p">{{this.homeData.goods.inTheSale}}</p>
+            <p class="row3-p">出售中的商品</p><!-- 昨日总访客 -->
           </b-col> 
           <b-col>
-            <p class="row3-p">0</p>
-            <p class="row3-p">昨日成交金额</p>
+            <p class="row3-p">{{this.homeData.goods.inTheWarehouse}}</p>
+            <p class="row3-p">仓库中的商品</p><!-- 昨日成交金额 -->
           </b-col> 
         </b-row>  
         <b-row class="body-row3-row1">
           <b-col col sm="4">
-            <p class="row3-p">0</p>
+            <p class="row3-p">{{this.homeData.goods.inTheSale}}</p>
             <p class="row3-p">出售中</p>
           </b-col> 
           <b-col col sm="4">
-            <p class="row3-p">0</p>
-            <p class="row3-p">橱窗中</p>
+            <p class="row3-p">{{this.homeData.goods.waitForAudit}}</p>
+            <p class="row3-p">等待审核的商品</p><!-- 橱窗中 -->
           </b-col>
           <b-col col sm="4">
           </b-col>
@@ -179,6 +179,7 @@ export default {
     background: #F2F3F6;
 
     padding-top: 65px;
+    padding-bottom: 100px;
   }
   
   .body-row1 {
