@@ -8,7 +8,7 @@ import MyProfile from '@/components/MyProfile'
 import ChangePhoneNo from '@/components/ChangePhoneNo'
 import ChangeShopName from '@/components/ChangeShopName'
 import FindMyPassword from '@/components/FindMyPassword'
-import Profile from '@/components/Profile'
+import ChangeShopInfo from '@/components/ChangeShopInfo'
 
 Vue.use(Router)
 
@@ -53,9 +53,9 @@ const router = new Router({
             component: FindMyPassword
           },
           {
-            path: '/profile',
-            name: 'Profile',
-            component: Profile
+            path: '/change-shop-info',
+            name: 'ChangeShopInfo',
+            component: ChangeShopInfo
           }
           
       ]

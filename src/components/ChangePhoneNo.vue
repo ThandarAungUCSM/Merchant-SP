@@ -73,20 +73,19 @@ export default {
         background:#f1f1f1;
         padding-top: 15px;
         border-top: 1rem solid #f1f1f1;
-        margin-left: 10px;
-        margin-right:10px;
-
       }
       .click-me{
         font-size: 20px;
         color: #707070;
         border: none;
+        border-radius: 3px;
         background: #23B8FF;
         width: 100%;
         outline: none;
         padding-top: 15px;
         padding-bottom: 15px;
-
+        margin-left: 15px;
+        margin-right:15px;
       }
       
         .text {
