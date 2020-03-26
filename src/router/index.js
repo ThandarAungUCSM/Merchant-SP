@@ -7,14 +7,19 @@ import MyNew from '@/components/MyNew'
 import MyProfile from '@/components/MyProfile'
 import ChangePhoneNo from '@/components/ChangePhoneNo'
 import ChangeShopName from '@/components/ChangeShopName'
-import FindMyPassword from '@/components/FindMyPassword'
 import ChangeShopInfo from '@/components/ChangeShopInfo'
 import ModifyingAttribute from '@/components/ModifyingAttribute'
 import Ship from '@/components/Ship'
 import Product from '@/components/Product'
 import CommodityConsultation from '@/components/CommodityConsultation'
 import Shop from '@/components/Shop'
+import PendingPayment from '@/components/PendingPayment'
+import PendingPaymentViewDetail from '@/components/PendingPaymentViewDetail'
+import PendingDeliveryViewDetail from '@/components/PendingDeliveryViewDetail'
+import TobeDeliver from '@/components/TobeDeliver'
+import ChangePrice from '@/components/ChangePrice'
 
+import FindMyPassword from '@/components/FindMyPassword'
 import ViewDetailMyatSu from '@/components/ViewDetailMyatSu'
 import ForgetPassword from '@/components/ForgotPassword'
 
@@ -99,7 +104,34 @@ const router = new Router({
             path: '/view-detail',
             name: 'ViewDetailMyatSu',
             component: ViewDetailMyatSu
+          },
+          {
+            path: '/pending-payment',
+            name: 'PendingPayment',
+            component: PendingPayment
+          },
+          {
+            path: '/to-deliver',
+            name: 'TobeDeliver',
+            component: TobeDeliver
+          },
+          {
+            path: '/pending-payment-view-detail',
+            name: 'PendingPaymentViewDetail',
+            component: PendingPaymentViewDetail
+          },
+          {
+            path: '/pending-delivery-view-detail',
+            name: 'PendingDeliveryViewDetail',
+            component: PendingDeliveryViewDetail
+          },
+          {
+            path: '/change-price',
+            name: 'ChangePrice',
+            component: ChangePrice
           }
+          
+          
           
           
           

@@ -5,7 +5,7 @@
         </b-col>
         <b-col>
             <span class="title-txt" v-if="phoneNo == 'changephno' || changeshop == 'changeshopname'">修改手机号</span>
-            <span class="title-txt-find-pwd" v-else-if="findPassword == 'findPwd'">找回密码</span>
+            <span class="title-txt-ship" v-else-if="findPassword == 'findPwd'">找回密码</span>
             <span class="title-txt" v-else-if="loginText == 'loginTxt'">登录</span>
             <span class="title-txt" v-else-if="changeShopInfo == 'changeShop'">修改店铺信息</span>
             <span class="title-txt-ship" v-else-if="modifyingAttribute == 'modifying'">修改属性</span>
@@ -13,6 +13,7 @@
             <span class="title-txt-ship" v-else-if="productPage == 'product'">商品管理</span>
             <span class="title-txt-ship" v-else-if="commodityConsultation == 'commodity'">商品咨询</span>
             <span class="title-txt-ship" v-else-if="shopPage == 'shop'">店铺</span>
+            <span class="title-txt-ship" v-else-if="changePrice == 'price'">改价</span>
             
             <span class="title-txt" v-else>消息</span>
         </b-col>
@@ -36,7 +37,8 @@ export default {
         shipPage: '',
         productPage: '',
         commodityConsultation: '',
-        shopPage: ''
+        shopPage: '',
+        changePrice: ''
     }
 }
 </script>
