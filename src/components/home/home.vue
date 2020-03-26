@@ -82,8 +82,8 @@
             <p class="row3-p">待发 货</p>
           </b-col>  
           <b-col>
-            <p class="row3-p">{{this.homeData.goods.inTheSale}}</p>
-            <p class="row3-p">出售中的商品</p><!-- 昨日总访客 -->
+            <p class="row3-p">{{this.homeData.goods.irregularities}}</p>
+            <p class="row3-p">违规下架的商品</p><!-- 昨日总访客 -->
           </b-col> 
           <b-col>
             <p class="row3-p">{{this.homeData.goods.inTheWarehouse}}</p>

@@ -7,5 +7,9 @@ const config = {
 
   getHome: request + 'Index/index', //获取首页信息
 
+  checUser: request + 'ForgetThePassword/checIsExistBySellerName', //验证账号是否存在
+  SendMsg: request + 'SendVerificationCode/registerSendMsg',//发送验证码
+  parseReqByPassword: request + 'ForgetThePassword/parseReqByPassword',//提交（忘记密码）
+
 }
 export default config

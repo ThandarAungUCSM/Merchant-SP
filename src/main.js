@@ -14,6 +14,9 @@ import 'es6-promise/auto'
 import store from '@/domain/store'
 import Vuex from 'vuex'
 
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+
 import httpConfig from './httpConfig';
 import HTTP from '../config/HTTP';
 Vue.prototype.$httpConfig = httpConfig;
@@ -44,6 +47,7 @@ Vue.use(BootstrapVue)
 Vue.use(VueI18n)
 Vue.use(Vuex)
 Vue.use(isLogin);
+Vue.use(ElementUI);
 
 new Vue({
   el: '#app',

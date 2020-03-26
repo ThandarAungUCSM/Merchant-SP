@@ -9,6 +9,14 @@ import ChangePhoneNo from '@/components/ChangePhoneNo'
 import ChangeShopName from '@/components/ChangeShopName'
 import FindMyPassword from '@/components/FindMyPassword'
 import ChangeShopInfo from '@/components/ChangeShopInfo'
+import ModifyingAttribute from '@/components/ModifyingAttribute'
+import Ship from '@/components/Ship'
+import Product from '@/components/Product'
+import CommodityConsultation from '@/components/CommodityConsultation'
+import Shop from '@/components/Shop'
+
+import ViewDetailMyatSu from '@/components/ViewDetailMyatSu'
+import ForgetPassword from '@/components/ForgotPassword'
 
 Vue.use(Router)
 
@@ -56,7 +64,45 @@ const router = new Router({
             path: '/change-shop-info',
             name: 'ChangeShopInfo',
             component: ChangeShopInfo
+          },
+          {
+            path: '/modifying-attribute',
+            name: 'ModifyingAttribute',
+            component: ModifyingAttribute
+          },
+          {
+            path: '/ship',
+            name: 'Ship',
+            component: Ship
+          },
+          {
+            path: '/product',
+            name: 'Product',
+            component: Product
+          },
+          {
+            path: '/commodity-consultation',
+            name: 'CommodityConsultation',
+            component: CommodityConsultation
+          },
+          {
+            path: '/shop',
+            name: 'Shop',
+            component: Shop
+          },
+          {
+            path: '/forget-password',
+            name: 'ForgetPassword',
+            component: ForgetPassword
+          },
+          {
+            path: '/view-detail',
+            name: 'ViewDetailMyatSu',
+            component: ViewDetailMyatSu
           }
+          
+          
+          
           
       ]
     }

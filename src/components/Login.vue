@@ -34,11 +34,83 @@
         <b-col class="hrcss"></b-col>
     </b-row>
     <b-row class="forgetpwd">
-        <b-col><span class="footer">忘记密码</span></b-col>
+        <b-col @click="cipherLayer"><span class="footer">忘记密码</span></b-col>
     </b-row>
     <b-row class="click">
         <button class="click-me" @click="loginClick">登录</button>
     </b-row>
+
+        <el-dialog
+            :close-on-click-modal="false"
+            title="找回密码"
+            :visible.sync="dialogVisible"
+            :before-close="close"
+            width="400px"
+            top="15%"
+        >
+            <el-form
+                :model="ruleForm2"
+                status-icon
+                :rules="rules2"
+                ref="ruleForm2"
+                label-width="100px"
+                class="demo-ruleForm"
+            >
+                <div class="pw-content">
+                    <el-form-item label="账号" prop="account_num">
+                        <el-input
+                            style="width:220px;"
+                            v-model="ruleForm2.account_num"
+                        ></el-input>
+                    </el-form-item>
+                    <el-form-item label="手机号码" prop="phone_num">
+                        <el-input
+                            style="width:220px;"
+                            v-model.number="ruleForm2.phone_num"
+                        ></el-input>
+                    </el-form-item>
+                    <el-form-item
+                        label="验证码"
+                        prop="check_code"
+                        :rules="[
+                            { required: true, message: '验证码不能为空' },
+                            { type: 'number', message: '验证码必须为数字值' }
+                        ]"
+                    >
+                        <el-input
+                            style="width:105px;"
+                            v-model.number="ruleForm2.check_code"
+                        ></el-input>
+                        <el-button
+                            type="info"
+                            :disabled="isActive"
+                            @click="submitForm1('ruleForm2')"
+                            >{{ btn_text }}</el-button
+                        >
+                    </el-form-item>
+                    <el-form-item label="新密码" prop="pass">
+                        <el-input
+                            type="password"
+                            style="width:220px;"
+                            v-model="ruleForm2.pass"
+                        ></el-input>
+                    </el-form-item>
+                    <el-form-item label="再次输入" prop="checkPass">
+                        <el-input
+                            type="password"
+                            style="width:220px;"
+                            v-model="ruleForm2.checkPass"
+                        ></el-input>
+                    </el-form-item>
+                </div>
+                <div style="padding-left:150px;">
+                    <el-button @click="close">取 消</el-button>
+                    <el-button type="primary" @click="submitForm('ruleForm2')"
+                        >确 定</el-button
+                    >
+                </div>
+            </el-form>
+        </el-dialog>
   </b-container>
 </template>
 
@@ -47,6 +119,60 @@ import commonHeader from '@/common/header'
 export default {
   name: 'Login',
   data () {
+    var validateAccountNum = (rule, value, callback) => {
+        if (value === "") {
+            callback(new Error("请输入账号"));
+        } else {
+            //验证账号是否存在
+            this.$HTTP(this.$httpConfig.checUser, {
+                seller_name: this.ruleForm2.account_num
+            })
+                .then(res => {
+                    callback();
+                    this.isUser = true;
+                    this.token = res.data.data;
+                    this.isPassAccount = true;
+                })
+                .catch(err => {
+                    callback(new Error("该用户不存在"));
+                    this.isUser = false;
+                    this.token = "";
+                    this.isPassAccount = false;
+                });
+        }
+    };
+    var checkPhone = (rule, value, callback) => {
+        if (!value) {
+            callback(new Error("手机号不能为空"));
+        } else {
+            const reg = /^1[3|4|5|7|8][0-9]\d{8}$/;
+            if (reg.test(value)) {
+                callback();
+            } else {
+                callback(new Error("请输入正确的手机号"));
+            }
+        }
+    };
+    var validatePass = (rule, value, callback) => {
+        if (!value) {
+            callback(new Error("请输入密码"));
+        } else if (value.length < 6) {
+            callback(new Error("新密码必须大于6位"));
+        } else {
+            callback();
+        }
+    };
+    var validatePass2 = (rule, value, callback) => {
+        if (!value) {
+            callback(new Error("请再次输入密码"));
+        } else if (value !== this.ruleForm2.pass) {
+            callback(new Error("两次输入密码不一致!"));
+        } else if (value.length < 6) {
+            callback(new Error("新密码必须大于6位"));
+        } else {
+            callback();
+        }
+    };
     return {
       user_name: "",
       pass_word: "",
@@ -54,7 +180,54 @@ export default {
       token: "",
       passwordFieldType: 'password',
       eyeimg: '/static/images/eye.png',
-      loginTxt: 'loginTxt'
+      loginTxt: 'loginTxt',
+
+
+
+      configInfo: [],
+        ruleForm2: {
+            account_num: "",
+            phone_num: "",
+            check_code: "",
+            pass: "",
+            checkPass: "",
+            isPassAccount: false
+        },
+        rules2: {
+            account_num: [
+                {
+                    required: true,
+                    validator: validateAccountNum,
+                    trigger: "blur"
+                }
+            ],
+            phone_num: [
+                { required: true, validator: checkPhone, trigger: "blur" }
+            ],
+            pass: [
+                { required: true, validator: validatePass, trigger: "blur" }
+            ],
+            checkPass: [
+                {
+                    required: true,
+                    validator: validatePass2,
+                    trigger: "blur"
+                }
+            ]
+        },
+        user_name: "",
+        pass_word: "",
+        dialogVisible: false,
+        input1: "",
+        input2: "",
+        input3: "",
+        input4: "",
+        input5: "",
+        btn_text: "获取验证码",
+        isActive: false,
+        isUser: "",
+        token: "",
+      
     }
   },
   components: {
@@ -71,11 +244,100 @@ export default {
       };
   },
   methods: {
+        //提交
+        submitForm(formName) {
+            // this.$refs[formName].validate((valid) => {
+            // if (valid) {
+            sessionStorage.setItem("data_token", this.token);
+            this.$HTTP(this.$httpConfig.parseReqByPassword, {
+                password: this.ruleForm2.pass,
+                password_again: this.ruleForm2.checkPass,
+                code: this.ruleForm2.check_code
+            })
+                .then(res => {
+                    this.$message({
+                        message: res.data.message,
+                        type: "success"
+                    });
+                    this.close();
+                })
+                .catch(res => {
+                    this.$message({
+                        message: res.data.message,
+                        type: "error"
+                    });
+                });
+            // } else {
+            // 	return false;
+            // }
+            // });
+        },
+        submitForm1() {
+            if (!this.isPassAccount) {
+                this.$message({
+                    message: "账号不存在",
+                    type: "error"
+                });
+
+                return;
+            }
+            //验证用户是否存在
+            this.$refs.ruleForm2.validateField("phone_num", validMessage => {
+                //再验证手机号码
+                if (validMessage == "") {
+                    this.obtain();
+                } else {
+                    return false;
+                }
+            });
+        },
+        //获取验证码
+        obtain() {
+            let N = 60;
+            let clear = null;
+            if (this.isActive == true) {
+                return false;
+            }
+            this.isActive = true;
+            this.$HTTP(this.$httpConfig.SendMsg, {
+                mobile: this.ruleForm2.phone_num
+            })
+                .then(res => {
+                    clear = setInterval(() => {
+                        this.btn_text = "请" + N-- + "秒后重试";
+                        if (N < 0) {
+                            clearInterval(clear);
+                            this.btn_text = "获取验证码";
+                            this.isActive = false;
+                        }
+                    }, 1000);
+                    this.$message({
+                        message: res.data.message,
+                        type: "success"
+                    });
+                })
+                .catch(res => {
+                    this.$message({
+                        message: res.data.message,
+                        type: "error"
+                    });
+                });
+        },
+        cipherLayer() {
+            this.dialogVisible = true;
+        },
+        close() {
+            this.$refs.ruleForm2.resetFields(); //关闭时重置表单数据和验证
+            this.dialogVisible = false;
+        },
+        forgetPassword() {
+            this.$router.push('/forget-password')
+        },
         switchVisibility() {
             this.passwordFieldType = this.passwordFieldType == 'password' ? 'text' : 'password'
             this.eyeimg = this.eyeimg == '/static/images/eye.png' ? '/static/images/open-eye.png' : '/static/images/eye.png'
         },
-      getConfigInfo() {
+        getConfigInfo() {
           this.$HTTP(this.$httpConfig.getHome, {
               token:sessionStorage.getItem("data_token")
           })
@@ -86,66 +348,66 @@ export default {
           .catch(err => {
               console.error(err);
           });
-      },
-      loginClick() {
-          if (!/^[\u4e00-\u9fa5\s_a-zA-Z0-9]+$/.test(this.user_name)) {
-              // this.$layer.msg("用户名称异常");
-              alert("用户名称异常")
-              return false;
-          }
-          if (!this.pass_word || this.pass_word.length < 6) {
-              // this.$layer.msg("密码必须大于6位");
-              alert("密码必须大于6位")
-              return false;
-          }
-          this.$HTTP(this.$httpConfig.login, {
-              seller_name: this.user_name,
-              password: this.pass_word
-          })
-          .then(res => {
-              // this.$layer.msg(res.data.message);
-              sessionStorage.setItem("data_token", res.data.data.token);
-              console.log("console Login " + JSON.stringify(res.data.data))
-              this.getApproval();
-          })
-          .catch(err => {});
-      },
-      getApproval() {
-          let obj = this;
-          this.$HTTP(this.$httpConfig.getApproval, {})
-              .then(res => {
-                  let menuMaster = res.data.data;
-                  let nav = [];
-                  for (var i in menuMaster) {
-                      if (
-                          typeof menuMaster[i].fid !== "undefined" &&
-                          menuMaster[i].fid == 0
-                      ) {
-                          nav.push({
-                              id: menuMaster[i].id,
-                              remark: menuMaster[i].remark,
-                              path: menuMaster[i].path
-                          });
-                      }
-                  }
-                  //全部权限
-                  sessionStorage.setItem(
-                      "allPrivilege",
-                      JSON.stringify(res.data.data)
-                  );
-                  sessionStorage.setItem("topPrivilege", JSON.stringify(nav));
-                //   obj.$router.addRoutes(res.data.data[0]);
-                  console.log(res.data.data)
-                  obj.$router.initLocalRouters();
-                  obj.$router.push("/home");
-              })
-              .catch(err => {
-                  // this.$message.error("没有权限，请联系管理员！");
-                  // this.$message.error(err);
-                  console.log("console error " + err)
-              });
-          }
-      }
+        },
+        loginClick() {
+            if (!/^[\u4e00-\u9fa5\s_a-zA-Z0-9]+$/.test(this.user_name)) {
+                // this.$layer.msg("用户名称异常");
+                alert("用户名称异常")
+                return false;
+            }
+            if (!this.pass_word || this.pass_word.length < 6) {
+                // this.$layer.msg("密码必须大于6位");
+                alert("密码必须大于6位")
+                return false;
+            }
+            this.$HTTP(this.$httpConfig.login, {
+                seller_name: this.user_name,
+                password: this.pass_word
+            })
+            .then(res => {
+                // this.$layer.msg(res.data.message);
+                sessionStorage.setItem("data_token", res.data.data.token);
+                console.log("console Login " + JSON.stringify(res.data.data))
+                this.getApproval();
+            })
+            .catch(err => {});
+        },
+        getApproval() {
+            let obj = this;
+            this.$HTTP(this.$httpConfig.getApproval, {})
+                .then(res => {
+                    let menuMaster = res.data.data;
+                    let nav = [];
+                    for (var i in menuMaster) {
+                        if (
+                            typeof menuMaster[i].fid !== "undefined" &&
+                            menuMaster[i].fid == 0
+                        ) {
+                            nav.push({
+                                id: menuMaster[i].id,
+                                remark: menuMaster[i].remark,
+                                path: menuMaster[i].path
+                            });
+                        }
+                    }
+                    //全部权限
+                    sessionStorage.setItem(
+                        "allPrivilege",
+                        JSON.stringify(res.data.data)
+                    );
+                    sessionStorage.setItem("topPrivilege", JSON.stringify(nav));
+                    //   obj.$router.addRoutes(res.data.data[0]);
+                    console.log(res.data.data)
+                    obj.$router.initLocalRouters();
+                    obj.$router.push("/home");
+                })
+                .catch(err => {
+                    // this.$message.error("没有权限，请联系管理员！");
+                    // this.$message.error(err);
+                    console.log("console error " + err)
+                });
+            }
+        }
      
 }
 </script>
