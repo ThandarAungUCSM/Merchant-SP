@@ -1,5 +1,5 @@
-const request = 'http://api.webeauty.com.au/agent/adminstore.php/';
-// const request = 'http://api.ihaosy.com/agent/adminstore.php/';
+// const request = 'http://api.webeauty.com.au/agent/adminstore.php/';
+const request = 'http://api.ihaosy.com/agent/adminstore.php/';
 
 const config = {
 

@@ -25,18 +25,20 @@
         <b-col class="horizontal-line"></b-col>
     </b-row>
     <div class="divtopbot">
-        <b-row class="text-center body-css" v-for="(i, index) in 7" :key="index">
-            <b-col style="background: #FFF;">
+        <b-row class="body-css" v-for="(i, index) in 7" :key="index">
+            <b-col cols="2" class="img-col">
                 <b-img src="/static/images/Clip.png" class="row-img" />
-                <div class="circle" style="">2</div>
+                <div class="circle">
+                    <span class="number-css">2</span>
+                </div>
             </b-col>
-            <b-col cols="9" class="row1-txt">
+            <b-col cols="10">
                 <b-row class="row1-txt-inner">
-                    <span>西西小公主</span>
-                    <span>9月24日</span>
+                    <span class="left-txt">西西小公主</span>
+                    <span class="right-txt">9月24日</span>
                 </b-row>
                 <b-row>
-                    <span>我付款成功了，看一下什么时候可以来你...</span>
+                    <span class="row-txt">我付款成功了，看一下什么时候可以来你...</span>
                 </b-row>
                 <b-row>
                     <b-col class="horizontal-line"></b-col>
@@ -44,20 +46,6 @@
             </b-col>
         </b-row>
     </div>
-    <!-- <b-row class="footerCss">
-      <b-col>
-        <b-img src="/static/images/group.png" class="footerImg" alt="Transparent image"></b-img>       
-        <p class="row3-p">首页</p>
-      </b-col> 
-      <b-col>
-        <b-img src="/static/images/group.png" class="footerImg" alt="Transparent image"></b-img>
-        <p class="row3-p">消息 </p>
-      </b-col>
-      <b-col>
-        <b-img src="/static/images/group.png" class="footerImg" alt="Transparent image"></b-img>
-        <p class="row3-p">我的 </p>
-      </b-col> 
-    </b-row> -->
     <div>
         <commonFooter :bgcolor='myNew'> </commonFooter>
     </div>
@@ -93,38 +81,43 @@ export default {
 <style scoped>
 
     @media screen and (max-width: 767px) {
-        .my-new {
-            
+        .right-txt {
+            font-size: 0.75rem;
+            color: #A3A3A3;
         }
-        .header-css {
-            background-image: linear-gradient(to right, #4EBDFF, #6093FF);
-            display: flex;
+        .row-txt {
+            font-size: 0.9375rem;
+            color: #A3A3A3;
+        }
+        .left-txt {
+            font-size: 1.0625rem;
+            color: #333333;
+        }
+        .img-col {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+        .number-css {
+            font-size: 0.5rem;
+            display: flex; 
+            justify-content: center;
             align-items: center;
-            padding-top: 10px;
-            padding-bottom: 10px;
         }
+        
         .header-css1 {
             background: #FFF;
             display: flex;
             align-items: center;
             padding-top: 10px;
-            /* padding-bottom: 10px; */
         }
         .body-css {
-            /* background: #FFF; */
             padding-top: 15px;
-        }
-        .header-img {
-            width: 0.5625rem;
-            height: 1.03125rem;
+            padding-left: 10px;
+            padding-right: 10px;
         }
         .row-img {
             width: 50px;
             height: 50px;
-        }
-        .row1-txt {
-            margin-left: 10px; 
-            margin-right: 10px;
         }
         .row1-txt-inner {
             display: flex; 
@@ -132,7 +125,7 @@ export default {
         }
         .divtopbot {
             padding-top: 1rem;
-            padding-bottom: 2rem;
+            padding-bottom: 5rem;
         }
         .row-horizontal-line {
             background: #F0F0F0;
@@ -142,23 +135,6 @@ export default {
             height: 1px; 
             margin-top: 10px;
             background: #EFEFEE;
-        }
-        .row1 {
-            margin-top: -20px; 
-        }
-        .footerCss {
-            background: #F9F9F9;
-            margin-left: 0px;
-            margin-right: 0px;
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-        }
-        .footerImg {
-            width: 40px; 
-            height: 40px;
-            margin-top: 0.5rem;
         }
         .tabActive {
             color: #0FA9FE;
@@ -179,22 +155,15 @@ export default {
             height: 3px; 
             width: 65px;
         }
-        .title-txt {
-            color: #FFF;
-            font-size: 1.03125rem;
-        }
         .circle {
-            width: 20px; 
-            height: 20px; 
+            width: 0.875rem;
+            height: 0.875rem;
             background: #F23B3C; 
-            border-radius: 10px; 
-            top: -8px;
+            border-radius: 0.437rem; 
+            top: -5px;
             position: absolute;
-            right: 6px;
+            right: -1px;
             color: #FFF;
-        }
-        .footerupdate {
-            background: lemonchiffon;
         }
         
     }
