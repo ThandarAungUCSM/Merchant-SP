@@ -18,6 +18,17 @@ import PendingPaymentViewDetail from '@/components/PendingPaymentViewDetail'
 import PendingDeliveryViewDetail from '@/components/PendingDeliveryViewDetail'
 import TobeDeliver from '@/components/TobeDeliver'
 import ChangePrice from '@/components/ChangePrice'
+import RefundAfterSale from '@/components/RefundAfterSale'
+import temp1 from '@/components/1'
+import Order from '@/components/Order'
+import MessagePlatform from '@/components/MessagePlatform'
+import MessageInner from '@/components/MessageInner'
+import ShippingAddress from '@/components/ShippingAddress'
+import NewShippingAddress from '@/components/NewShippingAddress'
+import EditShippingAddress from '@/components/EditShippingAddress'
+import AddShippingAddress from '@/components/AddShippingAddress'
+import calendar1 from '@/components/calendar1'
+import calendar2 from '@/components/calendar2'
 
 import FindMyPassword from '@/components/FindMyPassword'
 import ViewDetailMyatSu from '@/components/ViewDetailMyatSu'
@@ -129,13 +140,62 @@ const router = new Router({
             path: '/change-price',
             name: 'ChangePrice',
             component: ChangePrice
+          },
+          {
+            path: '/refund-after-sale',
+            name: 'RefundAfterSale',
+            component: RefundAfterSale
+          },
+          {
+            path: '/1',
+            name: 'temp1',
+            component: temp1
+          },
+          {
+            path: '/order',
+            name: 'Order',
+            component: Order
+          },
+          {
+            path: '/message-platform',
+            name: 'MessagePlatform',
+            component: MessagePlatform
+          },
+          {
+            path: '/message-inner',
+            name: 'MessageInner',
+            component: MessageInner
+          },
+          {
+            path: '/shipping-address',
+            name: 'ShippingAddress',
+            component: ShippingAddress
+          },
+          {
+            path: '/new-shipping-address',
+            name: 'NewShippingAddress',
+            component: NewShippingAddress
+          },
+          {
+            path: '/edit-shipping-address',
+            name: 'EditShippingAddress',
+            component: EditShippingAddress
+          },
+          {
+            path: '/add-shipping-address',
+            name: 'AddShippingAddress',
+            component: AddShippingAddress
+          },
+          {
+            path: '/calendar1',
+            name: 'calendar1',
+            component: calendar1
+          },
+          {
+            path: '/calendar2',
+            name: 'calendar2',
+            component: calendar2
           }
-          
-          
-          
-          
-          
-          
       ]
     }
   ]

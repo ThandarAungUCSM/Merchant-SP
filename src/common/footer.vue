@@ -1,22 +1,28 @@
 <template>
-    <b-row v-bind:class="[tempProp == 'myNew' ? 'footerCssChange' : 'footerCss']">
-      <b-col>
-        <b-img v-if="homeFooter == 'footerProp'" src="/static/images/selectHome.png" class="footerImg" alt="Transparent image"></b-img>       
-        <b-img v-else src="/static/images/home.png" class="footerImg" alt="Transparent image"></b-img>
-        <p :class="[homeFooter == 'footerProp' ? 'selectHome' : 'row3-p']">首页 </p>
-      </b-col> 
-      <b-col>
-        <b-img v-if="tempProp == 'myNew'" src="/static/images/select-color-overlay.png" class="selfooterImg" alt="Transparent image"></b-img> 
-        <b-img v-else src="/static/images/shape.png" class="footerImg" alt="Transparent image"></b-img>
-        <p v-if="tempProp !== 'myNew'" class="row3-p">消息 </p>
-      </b-col> 
-      <b-col>
-        <b-img v-if="profileData == 'propProfile'" src="/static/images/selectPeople.png" class="footerImg" alt="Transparent image"></b-img>
-        <b-img v-else src="/static/images/people.png" class="footerImg" alt="Transparent image"></b-img>
-        <p v-if="profileData == 'propProfile'" class="row3-p-select">我的 </p>
-        <p v-else class="row3-p">我的 </p>
-      </b-col> 
-    </b-row>
+    <div>
+        <b-row v-if="shippingAddress == 'shippingaddress'" class="addbtn">
+          添加发货地址
+        </b-row>
+        <b-row v-else v-bind:class="[tempProp == 'myNew' ? 'footerCssChange' : 'footerCss']">
+          <b-col>
+            <b-img v-if="homeFooter == 'footerProp'" src="/static/images/selectHome.png" class="footerImg" alt="Transparent image"></b-img>       
+            <b-img v-else src="/static/images/home.png" class="footerImg" alt="Transparent image"></b-img>
+            <p :class="[homeFooter == 'footerProp' ? 'selectHome' : 'row3-p']">首页 </p>
+          </b-col> 
+          <b-col>
+            <b-img v-if="tempProp == 'myNew'" src="/static/images/select-color-overlay.png" class="selfooterImg" alt="Transparent image"></b-img> 
+            <b-img v-else src="/static/images/shape.png" class="footerImg" alt="Transparent image"></b-img>
+            <p v-if="tempProp !== 'myNew'" class="row3-p">消息 </p>
+          </b-col> 
+          <b-col>
+            <b-img v-if="profileData == 'propProfile'" src="/static/images/selectPeople.png" class="footerImg" alt="Transparent image"></b-img>
+            <b-img v-else src="/static/images/people.png" class="footerImg" alt="Transparent image"></b-img>
+            <p v-if="profileData == 'propProfile'" class="row3-p-select">我的 </p>
+            <p v-else class="row3-p">我的 </p>
+          </b-col> 
+        </b-row>
+        
+    </div>
 </template>
 <script>
 export default {
@@ -28,7 +34,8 @@ export default {
     props: {
         bgcolor: "",
         homeFooter: "",
-        profileData: ""
+        profileData: "",
+        shippingAddress: ""
     },
     created() {
         this.tempProp = this.bgcolor
@@ -38,6 +45,7 @@ export default {
 
 
 <style scoped>
+    
     .footerCss {
       background: #FFF;
       margin-left: 0px;
@@ -55,6 +63,17 @@ export default {
       left: 0;
       bottom: 0;
       width: 100%;
+    }
+    .addbtn {
+      background-image: linear-gradient(to right, #4EBDFF, #6093FF);
+      color: #FFF;
+      justify-content: center;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
     }
     .footerImg {
       width: 1.5rem; 
