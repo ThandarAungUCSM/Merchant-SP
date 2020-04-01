@@ -11,14 +11,14 @@
         </div>
         <div class="row1" style="height: 0px;">
             <b-row class="body-row1">
-                <b-col>
+                <b-col class="profilecol">
                     <b-img src="/static/images/椭圆 1.png" class="profile-title-img" alt=""></b-img>
                 </b-col>
                 <b-col cols="7" class="headerCss">
                     <p class="right-name">小天鹅官方旗舰店</p>
                     <span style="color: #999999">所在城市：上海市 徐家汇</span>
                 </b-col>
-                <b-col cols="2">
+                <b-col cols="2" class="col3right">
                     <b-img src="/static/images/fanhui-right.png" class="profile-right" alt=""></b-img>
                 </b-col>
             </b-row>
@@ -82,11 +82,11 @@
 
         <!-- v-for="i in 2" :key="i" -->
         <b-row class="row2" >
-            <b-col cols="5" class="rowcol3">
+            <b-col cols="6" class="rowcol3">
                 <b-img src="/static/images/形状 616.png" class="row-img1" />
                 <span class="fontsizeTxt">今日成交额</span>
             </b-col>
-            <b-col cols="7" class="rightcol" style="text-align: right;">
+            <b-col cols="6" class="rightcol" style="text-align: right;">
                 <b-img src="/static/images/图层 68 副本 3.png" class="row-img2" />
             </b-col>
         </b-row>
@@ -96,21 +96,21 @@
             </b-col>
         </b-row>
         <b-row class="row2" >
-            <b-col cols="5" class="rowcol3">
+            <b-col cols="6" class="rowcol3">
                 <b-img src="/static/images/形状 617.png" class="row-img1" />
                 <span class="fontsizeTxt">今日访客数</span>
             </b-col>
-            <b-col cols="7" class="rightcol" style="text-align: right;">
+            <b-col cols="6" class="rightcol" style="text-align: right;">
                 <b-img src="/static/images/图层 68 副本 3.png" class="row-img2" />
             </b-col>
         </b-row>
 
         <b-row class="row2" style="margin-top: 12px;">
-            <b-col cols="5" class="rowcol3">
+            <b-col cols="6" class="rowcol3">
                 <b-img src="/static/images/形状 618.png" class="row-img1" />
                 <span class="fontsizeTxt">我的发货地址</span>
             </b-col>
-            <b-col cols="7" class="rightcol" style="text-align: right;">
+            <b-col cols="6" class="rightcol" style="text-align: right;">
                 <b-img src="/static/images/图层 68 副本 3.png" class="row-img2" />
             </b-col>
         </b-row>
@@ -162,7 +162,13 @@ export default {
 <style scoped>
 
     @media screen and (max-width: 767px) {
-        
+        .col3right {
+            padding-right: 0px;
+        }
+        .profilecol {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
         .row2 {
             background: #FFF;
             margin-right: 0px;
@@ -193,6 +199,7 @@ export default {
         }
         .rowcol3 {
             padding-left: 25px;
+            padding-right: 0px;
             text-align: left;
         }
         .rowImg {
@@ -225,6 +232,7 @@ export default {
         }
         .headerCss {
             padding-left: 0px; 
+            padding-right: 0px;
             text-align: left;
         }
         .my-profile {

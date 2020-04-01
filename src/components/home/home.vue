@@ -10,19 +10,19 @@
           <b-row class="title-row2">
             <b-col>
               <p class="row3-p">0</p>
-              <p>待付款</p>
+              <p class="txtrow3">待付款</p>
             </b-col>
             <b-col>
               <p class="row3-p">0</p>
-              <p>待发货</p>
+              <p class="txtrow3">待发货</p>
             </b-col>
             <b-col>
               <p class="row3-p">0</p>
-              <p>退款售后</p>
+              <p class="txtrow3">退款售后</p>
             </b-col>
             <b-col>
               <p class="row3-p">0</p>
-              <p>商品咨询</p>
+              <p class="txtrow3">商品咨询</p>
             </b-col>
           </b-row>
         </div>
@@ -41,19 +41,19 @@
         <b-row>
           <b-col>
             <b-img src="/static/images/icon/shop.png" style="width: 40px; height: 40px;" alt="Transparent image"></b-img>
-            <p>店铺</p>
+            <p class="p-menu">店铺</p>
           </b-col>  
           <b-col>
             <b-img src="/static/images/icon/product.png" style="width: 40px; height: 40px;" alt="Transparent image"></b-img>
-            <p>商品</p>
+            <p class="p-menu">商品</p>
           </b-col> 
           <b-col>
             <b-img src="/static/images/icon/order.png" style="width: 40px; height: 40px;" alt="Transparent image"></b-img>
-            <p>订单</p>
+            <p class="p-menu">订单</p>
           </b-col> 
           <b-col>
             <b-img src="/static/images/icon/fund.png" style="width: 40px; height: 40px;" alt="Transparent image"></b-img>
-            <p>资金中心</p>
+            <p class="p-menu">资金中心</p>
           </b-col> 
         </b-row>  
       </div>
@@ -64,40 +64,40 @@
         </b-row>
         <b-row class="body-row3-row1">
           <b-col>
-            <p class="row3-p">{{this.homeData.userToday}}</p>
-            <p class="row3-p">今日订单数</p>
+            <p class="datap">{{this.homeData.userToday}}</p>
+            <p class="datap1">今日订单数</p>
           </b-col>  
           <b-col>
-            <p class="row3-p">{{this.homeData.order.refunds}}</p>
-            <p class="row3-p">退款中</p>
+            <p class="datap">{{this.homeData.order.refunds}}</p>
+            <p class="datap1">退款中</p>
           </b-col> 
           <b-col>
-            <p class="row3-p">{{this.homeData.order.pendingPayment}}</p>
-            <p class="row3-p">待付款</p>
+            <p class="datap">{{this.homeData.order.pendingPayment}}</p>
+            <p class="datap1">待付款</p>
           </b-col> 
         </b-row>
         <b-row class="body-row3-row1">
           <b-col>
-            <p class="row3-p">{{this.homeData.order.pendingDelivery}}</p>
-            <p class="row3-p">待发 货</p>
+            <p class="datap">{{this.homeData.order.pendingDelivery}}</p>
+            <p class="datap1">待发 货</p>
           </b-col>  
           <b-col>
-            <p class="row3-p">{{this.homeData.goods.irregularities}}</p>
-            <p class="row3-p">违规下架的商品</p><!-- 昨日总访客 -->
+            <p class="datap">{{this.homeData.goods.irregularities}}</p>
+            <p class="datap1">违规下架的商品</p><!-- 昨日总访客 -->
           </b-col> 
           <b-col>
-            <p class="row3-p">{{this.homeData.goods.inTheWarehouse}}</p>
-            <p class="row3-p">仓库中的商品</p><!-- 昨日成交金额 -->
+            <p class="datap">{{this.homeData.goods.inTheWarehouse}}</p>
+            <p class="datap1">仓库中的商品</p><!-- 昨日成交金额 -->
           </b-col> 
         </b-row>  
         <b-row class="body-row3-row1">
           <b-col col sm="4">
-            <p class="row3-p">{{this.homeData.goods.inTheSale}}</p>
-            <p class="row3-p">出售中</p>
+            <p class="datap">{{this.homeData.goods.inTheSale}}</p>
+            <p class="datap1">出售中</p>
           </b-col> 
           <b-col col sm="4">
-            <p class="row3-p">{{this.homeData.goods.waitForAudit}}</p>
-            <p class="row3-p">等待审核的商品</p><!-- 橱窗中 -->
+            <p class="datap">{{this.homeData.goods.waitForAudit}}</p>
+            <p class="datap1">等待审核的商品</p><!-- 橱窗中 -->
           </b-col>
           <b-col col sm="4">
           </b-col>
@@ -145,6 +145,21 @@ export default {
 <style scoped>
 
 @media screen and (max-width: 767px) {
+  .datap {
+    font-size: 1.125rem;
+    color: #000000;
+  }
+  .datap1 {
+    font-size: 0.8125rem;
+    color: #888888;
+  }
+  .p-menu {
+    color: #000000;
+    font-size: 0.8125rem;
+  }
+  .txtrow3 {
+    font-size: 0.75rem;
+  }
   .home {
     padding-left: 0px;
     padding-right: 0px;
@@ -207,12 +222,12 @@ export default {
   .vertical-line {
     height: 25px;
     border: 0.5px solid #DBD6D6;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
   }
   .right-txt {
     font-size: 0.9375rem;
     color: #333333;
-    font-weight: bold;
   }
   .title-group1 {
     font-size: 0.9375rem;
@@ -237,6 +252,7 @@ export default {
     margin-top: 1rem;
   }
   .row3-p {
+    font-size: 1.0625rem;
     margin-bottom: 0px;
   }
   .row1 {
@@ -248,9 +264,8 @@ export default {
     color: #FFF;
   }
   .left-img {
-    width: 2.384rem;
+    width: 2.384375rem;
     height: 1rem;
-    margin-right: 1rem;
   }
 }
 

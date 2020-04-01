@@ -65,22 +65,27 @@ const router = new Router({
             path: '/change-ph-no',
             name: 'ChangePhoneNo',
             component: ChangePhoneNo
-          },
+          },//chitsu
           {
             path: '/change-shop-name',
             name: 'ChangeShopName',
             component: ChangeShopName
-          },
+          },//chitsu
           {
             path: '/find-password',
             name: 'FindMyPassword',
             component: FindMyPassword
-          },
+          },//myatsu
           {
             path: '/change-shop-info',
             name: 'ChangeShopInfo',
             component: ChangeShopInfo
-          },
+          },//myatsu (including popup)
+          {
+            path: '/view-detail',
+            name: 'ViewDetailMyatSu',
+            component: ViewDetailMyatSu
+          },//myatsu
           {
             path: '/modifying-attribute',
             name: 'ModifyingAttribute',
@@ -110,11 +115,6 @@ const router = new Router({
             path: '/forget-password',
             name: 'ForgetPassword',
             component: ForgetPassword
-          },
-          {
-            path: '/view-detail',
-            name: 'ViewDetailMyatSu',
-            component: ViewDetailMyatSu
           },
           {
             path: '/pending-payment',

@@ -2,7 +2,7 @@
   <b-container>
     <commonHeader :modifyingAttribute="modifying"></commonHeader>
     <b-row class="modifyrow">
-        <b-col cols="3">
+        <b-col cols="3" class="imgcol3">
             <b-img src="/static/images/圆角矩形 12.png" class="modifyimg" alt=""></b-img>  
         </b-col>
         <b-col cols="9" class="rightcss">
@@ -12,11 +12,6 @@
             <p class="p-bot">价格：2980.00   数量：2件 </p>
         </b-col>
     </b-row>
-    <!-- <b-row>
-        <b-col cols="12" class="fullrow">
-            <div class="fullrowin"></div>
-        </b-col>
-    </b-row> -->
     <b-row class="modifyrow1">
         <p class="row2">颜色：<span class="row2-red">红色</span></p>
         <b-img src="/static/images/exit.png" class="cross-img" />
@@ -51,6 +46,10 @@ export default {
 <style scoped>
 
 @media screen and (max-width: 767px) {
+  .imgcol3 {
+    padding-right: 0px; 
+    padding-left: 10px;
+  }
   .modifyimg {
       width: 5.625rem;
       height: 5.625rem;
@@ -62,6 +61,8 @@ export default {
   }
   .rightcss {
       text-align: left;
+      padding-right: 0px;
+      padding-left: 20px;
   }
   .p-bot {
       margin-bottom: 3px;
