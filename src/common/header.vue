@@ -27,7 +27,7 @@
                 <span class="title-txt-ship" v-else-if="changePrice == 'price'">改价</span>
                 <span class="title-txt-ship" v-else-if="refundafterSale == 'refundsaled'">退款售后</span>
                 <span class="title-txt-ship" v-else-if="capitalCenter == 'capitalCen'">资金中心</span>
-                <span class="title-txt-ship" v-else-if="addShippingAddress == 'addShippingAddress'">AddShippingAddress</span>
+                <span class="title-txt-ship" v-else-if="addShippingAddress == 'addShippingAddress'">添加发货地址</span>
             
                 <span class="title-txt" v-else>消息</span>
             </b-col>
