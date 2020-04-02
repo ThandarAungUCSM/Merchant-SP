@@ -6,13 +6,14 @@
             <p class="zerocss">0.00</p>
         </b-col>
     </b-row>
+    
   </b-container>
 </template>
 
 <script>
 import commonHeader from '@/common/header'
 export default {
-  name: '1',
+  name: 'CapitalCenter',
   data () {
     return {
       capitalCen: 'capitalCen'
@@ -34,7 +35,8 @@ export default {
 
 @media screen and (max-width: 767px) {
   .modifyrow {
-      padding-top: 20px;
+      margin-top: -1px;
+      padding-top: 21px;
       padding-bottom: 30px;
       background-image: linear-gradient(to right, #4EBDFF, #6093FF);
   }

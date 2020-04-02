@@ -5,7 +5,10 @@
     <b-row class="modifyrow">
         <b-col cols="12" class="date-time">
             <span class="">02-05昨日 </span>
-            <span class="">02-05昨日 </span>
+            <span class="">
+                <b-img src="/static/images/arrow.png" class="arrow-img" style="margin-right: 2rem;" />
+                <b-img src="/static/images/back.png" class="arrow-img" />
+            </span>
         </b-col>
         
         <b-col cols="12" class="zerocss">
@@ -47,8 +50,6 @@
                     <p>02-02 </p>
                     <p>02-05 </p>
                     <p>02-01 </p>
-                    <p>02-05 </p>
-                    <p>02-05 </p>
                     <p>02-05 </p>
                     <p>02-05 </p>
                     <p>02-05 </p>
@@ -117,6 +118,10 @@ export default {
 <style scoped>
 
     @media screen and (max-width: 767px) {
+        .arrow-img {
+            height: 0.75rem; 
+            width: 0.4375rem;
+        }
         .titlerow {
             padding-bottom: 1rem;
         }

@@ -40,22 +40,50 @@
         <transition name="modal" style="height: 200px;">
             <div class="modal-mask">
                 <div class="modal-wrapper">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <b-row class="header-css1">
-                                <b-col cols="6">
-                                    <b-row>
-                                        <b-col cols="7" v-bind:class="[tabActive == 'tab1' ? 'tabActive' : 'tabNoA']" class="tab1css" @click="tabClick('tab1')">
-                                            <span style="padding-right: 7px;">天津市 </span>
-                                            <span> 天津市</span>
-                                            <div v-if="tabActive == 'tab1'" class="tabLine">
-                                                <div class="tablinein"></div>   
-                                            </div> 
-                                            <div v-else class="tabLine">
-                                                <div class="tablineinElse"></div>   
-                                            </div> 
-
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <b-row class="header-css1">
+                                    <b-col cols="6">
+                                        <b-row>
+                                            <b-col cols="4" v-bind:class="[tabActive == 'tab1' ? 'tabActive' : 'tabNoA']" class="tab1css" @click="tabClick('tab1')">
+                                                <span>天津市 </span>
+                                                <div v-if="tabActive == 'tab1'" class="tabLine">
+                                                    <div class="tablinein"></div>   
+                                                </div> 
+                                                <div v-else class="tabLine">
+                                                    <div class="tablineinElse"></div>   
+                                                </div> 
+                                            </b-col>
+                                            <b-col cols="4" v-bind:class="[tabActive == 'tab2' ? 'tabActive' : 'tabNoA']" class="tab2css" @click="tabClick('tab2')">
+                                                <span> 天津市</span>
+                                                <div v-if="tabActive == 'tab2'" class="tabLine">
+                                                    <div class="tablinein"></div>   
+                                                </div> 
+                                                <div v-else class="tabLine">
+                                                    <div class="tablineinElse"></div>   
+                                                </div> 
+                                            </b-col>
+                                            <!-- <b-col cols="4" v-bind:class="[tabActive == 'tab2' ? 'tabActive' : 'tabNoA']" class="tab2css" @click="tabClick('tab2')">
+                                                <span>天津市</span>
+                                                <div v-if="tabActive == 'tab2'" class="tabLine">
+                                                    <div class="tablinein"></div>   
+                                                </div> 
+                                                <div v-else class="tabLine">
+                                                    <div class="tablineinElse"></div>   
+                                                </div> 
+                                            </b-col> -->
+                                            <b-col cols="4" v-bind:class="[tabActive == 'tab3' ? 'tabActive' : 'tabNoA']" class="tab3css" @click="tabClick('tab3')">
+                                                <span>小白楼</span>
+                                                <div v-if="tabActive == 'tab3'" class="tabLine">
+                                                    <div class="tablinein"></div>   
+                                                </div> 
+                                                <div v-else class="tabLine">
+                                                    <div class="tablineinElse"></div>   
+                                                </div> 
+                                            </b-col>
+                                        </b-row>  
+                                        <b-row>
                                             <div :class="tabActive == 'tab3' ? 'displaycss' : 'nodisplay'">
                                                 <div>
                                                     <p class="ptext">劝业场街道</p>
@@ -79,51 +107,32 @@
                                                     <p class="ptext">其他</p>
                                                 </div>
                                             </div>
-                                        </b-col>
-                                        <!-- <b-col cols="4" v-bind:class="[tabActive == 'tab2' ? 'tabActive' : 'tabNoA']" class="tab2css" @click="tabClick('tab2')">
-                                            <span>天津市</span>
-                                            <div v-if="tabActive == 'tab2'" class="tabLine">
-                                                <div class="tablinein"></div>   
-                                            </div> 
-                                            <div v-else class="tabLine">
-                                                <div class="tablineinElse"></div>   
-                                            </div> 
-                                        </b-col> -->
-                                        <b-col cols="5" v-bind:class="[tabActive == 'tab3' ? 'tabActive' : 'tabNoA']" class="tab3css" @click="tabClick('tab3')">
-                                            <span>小白楼</span>
-                                            <div v-if="tabActive == 'tab3'" class="tabLine">
-                                                <div class="tablinein"></div>   
-                                            </div> 
-                                            <div v-else class="tabLine">
-                                                <div class="tablineinElse"></div>   
-                                            </div> 
-                                        </b-col>
-                                    </b-row>    
-                                </b-col>    
-                                <b-col cols="6" v-bind:class="[tabActive == 'tab4' ? 'tabActive' : 'tabNoA']" class="tab4css" @click="tabClick('tab4')">
-                                    <span>确定</span>
-                                    <div v-if="tabActive == 'tab4'" class="tabLine1">
-                                        <div class="tablinein"></div>   
-                                    </div> 
-                                    <div v-else class="tabLine1">
-                                        <div class="tablineinElse"></div>   
-                                    </div> 
+                                        </b-row>  
+                                    </b-col>    
+                                    <b-col cols="6" v-bind:class="[tabActive == 'tab4' ? 'tabActive' : 'tabNoA']" class="tab4css" @click="tabClick('tab4')">
+                                        <span>确定</span>
+                                        <div v-if="tabActive == 'tab4'" class="tabLine1">
+                                            <div class="tablinein"></div>   
+                                        </div> 
+                                        <div v-else class="tabLine1">
+                                            <div class="tablineinElse"></div>   
+                                        </div> 
 
-                                    <div :class="tabActive == 'tab4' ? 'displaycss1' : 'nodisplay'">
-                                        <div>北京市</div>
-                                        <div>天津市</div>
-                                        <div>河北省</div>
+                                        <div :class="tabActive == 'tab4' ? 'displaycss1' : 'nodisplay'">
+                                            <div>北京市</div>
+                                            <div>天津市</div>
+                                            <div>河北省</div>
+                                            
+                                            
+                                        </div>
                                         
-                                        
-                                    </div>
-                                    
-                                </b-col>
-                            </b-row>
+                                    </b-col>
+                                </b-row>
+                            </div>
+
+                            
                         </div>
-
-                        
                     </div>
-                </div>
                 </div>
             </div>
         </transition>
@@ -227,6 +236,9 @@ export default {
             text-align: right;
             padding-left: 0px; 
             padding-right: 0px;
+        }
+        .displaycss {
+            text-align: left;
         }
         .nodisplay {
             visibility: hidden;

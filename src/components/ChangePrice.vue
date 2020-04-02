@@ -2,10 +2,10 @@
   <b-container>
     <commonHeader :changePrice="price"></commonHeader>
     <b-row class="modifyrow">
-        <b-col cols="3">
+        <b-col cols="3" style="padding-right: 0px; padding-left: 10px;">
             <b-img src="/static/images/圆角矩形 12.png" class="modifyimg" alt=""></b-img>  
         </b-col>
-        <b-col cols="9" class="rightcss">
+        <b-col cols="9" class="rightcss" style="padding-right: 10px; padding-left: 20px;">
             <p class="p-bot">春装新款女假两件女装春季长袖拼接</p>
             <p class="p-bot">宽松韩版上衣服ins潮 </p>
             <p class="p-bot-1">买家ID：6564654656</p>         

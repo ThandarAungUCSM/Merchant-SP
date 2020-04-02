@@ -2,7 +2,7 @@
   <b-container class="my-new">
     <commonHeader></commonHeader>
     <b-row class="row1">
-        <b-col cols="12">
+        <b-col cols="12" class="col12">
             <p class="text1">
                 火神山医院建设背后厂长带伤上工地，<br>
                 亲人感染肺炎离世
@@ -58,6 +58,10 @@ export default {
 <style scoped>
 
     @media screen and (max-width: 767px) {
+        .col12 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
         .text1 {
             color: #000000;
             font-size: 1.25rem;
@@ -90,6 +94,7 @@ export default {
         }
         .row2 {
             padding-top: 10px;
+            margin-bottom: 2.5rem;
         }
         
     }

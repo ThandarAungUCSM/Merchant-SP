@@ -66,15 +66,42 @@ export default {
     }
     .addbtn {
       background-image: linear-gradient(to right, #4EBDFF, #6093FF);
-      color: #FFF;
-      justify-content: center;
+      padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
+      margin-left: 0px;
+      margin-right: 0px;
       position: fixed;
       left: 0;
       bottom: 0;
       width: 100%;
-      padding-top: 0.7rem;
-      padding-bottom: 0.7rem;
+      color: #FFF;
+      justify-content: center;
     }
+
+    .footerCss {
+      background: #FFF;
+      margin-left: 0px;
+      margin-right: 0px;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    .footerCssChange {
+      background: #F9F9F9;
+      margin-left: 0px;
+      margin-right: 0px;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+
+
+
+
+
     .footerImg {
       width: 1.5rem; 
       height: 1.312rem;

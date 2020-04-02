@@ -19,7 +19,7 @@ import PendingDeliveryViewDetail from '@/components/PendingDeliveryViewDetail'
 import TobeDeliver from '@/components/TobeDeliver'
 import ChangePrice from '@/components/ChangePrice'
 import RefundAfterSale from '@/components/RefundAfterSale'
-import temp1 from '@/components/1'
+import CapitalCenter from '@/components/CapitalCenter'
 import Order from '@/components/Order'
 import MessagePlatform from '@/components/MessagePlatform'
 import MessageInner from '@/components/MessageInner'
@@ -160,16 +160,16 @@ const router = new Router({
             path: '/calendar2',
             name: 'calendar2',
             component: calendar2
-          },
+          },// can delete but
           {
             path: '/change-price',
             name: 'ChangePrice',
             component: ChangePrice
           },
           {
-            path: '/1',
-            name: 'temp1',
-            component: temp1
+            path: '/capital-center',
+            name: 'CapitalCenter',
+            component: CapitalCenter
           },
           {
             path: '/message-platform',

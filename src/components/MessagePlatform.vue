@@ -26,7 +26,7 @@
     </b-row>
     <div class="divtopbot">
         <b-row class="text-center body-css" v-for="(i, index) in 6" :key="index">
-            <b-col>
+            <b-col cols="2" class="circlecol">
                 <div class="circle">
                     <b-img src="/static/images/消息 (2).png" class="row-img" />
                  </div>
@@ -36,7 +36,7 @@
                     <span class="text1">此处是消息标题 </span>
                     <span class="text2">9月24日</span>
                 </b-row>
-                <b-row>
+                <b-row class="txtcss">
                     <span class="text3">此处是消息内容围绕着设计人群及泛台中...</span>
                 </b-row>
                 <b-row>
@@ -94,6 +94,12 @@ export default {
 <style scoped>
 
     @media screen and (max-width: 767px) {
+        .circlecol {
+            padding-left: 10px;
+        }
+        .txtcss {
+            text-align: left;
+        }
         .my-new {
             
         }
@@ -138,6 +144,7 @@ export default {
         .row1-txt {
             margin-left: 10px; 
             margin-right: 10px;
+            padding-right: 10px;
         }
         .row1-txt-inner {
             display: flex; 

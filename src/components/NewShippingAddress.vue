@@ -20,9 +20,16 @@
         <b-col cols="12" class="address">
             <span class="">请填写详细地址，不少于5个字</span>
         </b-col>
-        <b-col cols="12" class="date-time">
+        <!-- <b-col cols="12" class="date-time">
             <span class="">设为默认</span>
             <b-img src="/static/images/圆角矩形 1.png" class="switch-img" />
+        </b-col> -->
+        <b-col cols="12" class="switchbtn">
+            <span class="">设为默认</span>
+            <label class="switch" style="margin-bottom: 0rem;">
+                <input type="checkbox" v-model="switchValue" checked>
+                <span class="slider round"></span>
+            </label>
         </b-col>
     </b-row>
     
@@ -35,7 +42,8 @@ export default {
   name: 'New-Shipping-Address',
   data () {
     return {
-      newshippingaddress: 'newshippingaddress'
+      newshippingaddress: 'newshippingaddress',
+      switchValue: true
     }
   },
   components: {
@@ -83,6 +91,7 @@ export default {
         .date-time {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             padding-top: 15px;
             padding-bottom: 15px;
 
@@ -90,6 +99,15 @@ export default {
             color: #282828;
 
             border-bottom: 1px solid #F0F0F0;
+        }
+        .switchbtn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 0.875rem;
+            color: #282828;
         }
         .address {
             display: flex;
@@ -139,7 +157,7 @@ export default {
             margin-right: 0.7rem;
         }
         .modifyrow {
-            padding-bottom: 10px;
+            /* padding-bottom: 10px; */
             background: #FFF;
             border-bottom: 1rem solid #f0f0f0;
         }
@@ -260,6 +278,79 @@ export default {
         .switch-img {
             width: 3.44rem;
         }
+
+        .custom-switch {
+            padding-left: 1rem;
+        }
+
+
+
+
+
+
+
+
+        .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+background: #000;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #F0F0F0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #FFF;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #25B603;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
         
     }
   
