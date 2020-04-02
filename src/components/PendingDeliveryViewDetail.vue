@@ -43,7 +43,7 @@
         <b-row class="check-btn">
             <b-col style="border-right: 1px solid #E6E6E6;"> 修改属性 </b-col>
             <b-col v-b-modal.modal-center style="color: #EC632C;"> 发货</b-col>
-            <b-modal id="modal-center" class="modal-content modal-body" centered hide-header="true" hide-footer="true" cancel-title= "取消" ok-title="确认">
+            <!-- <b-modal id="modal-center" class="modal-content modal-body" centered hide-header="true" hide-footer="true" cancel-title= "取消" ok-title="确认">
                 <p style="text-align: center; font-size: 1.1875rem; color: #000000;">确认关闭订单？</p>
                 <p style="text-align: center; font-size: 0.875rem; color: #000000;" class="my-4"> 删除之后可以从电脑端回收站恢复</p>
                     <footer id="modal-center___BV_modal_footer_" class="modal-footer">
@@ -56,7 +56,7 @@
                             </b-col>
                         </b-row>
                     </footer>
-            </b-modal>
+            </b-modal> -->
         </b-row>
 
   </b-container>

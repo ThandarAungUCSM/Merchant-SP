@@ -30,7 +30,7 @@
     <b-row class="row-edit">
         <b-col cols="12">
             <b-form-group>
-                <b-form-radio v-model="selected" name="some-radios" value="A">设为默认地址</b-form-radio>
+                <b-form-radio v-model="selected" name="some-radios" value="A" class="radiocss">设为默认地址</b-form-radio>
                 <b-form-radio v-model="selected" name="some-radios" value="B">设为默认地址</b-form-radio>
             </b-form-group>
         </b-col>    
@@ -202,6 +202,9 @@ export default {
 <style scoped>
 
     @media screen and (max-width: 767px) {
+        .radiocss {
+            margin-bottom: 0.5rem;
+        }
         .ptext {
             margin-bottom: 1.5rem;
         }

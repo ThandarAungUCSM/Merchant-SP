@@ -80,7 +80,8 @@
                 </div>
             </b-col>
         </b-row>  
-    </div>  
+    </div> 
+     
     <div v-for="i in 3" :key="i">
         <b-row class="modifyrow">
             <b-col cols="4" class="leftcol">
@@ -132,35 +133,11 @@ export default {
 
 <style scoped>
     @media screen and (max-width: 767px) {
-        .square-img {
-            width: 1.0625rem;
-            height: 1.0625rem;
-            margin-right: 0.7rem;
-        }
-        .common-tab {
-            width: 5rem;
-            border: 1px solid #999999;
-            border-radius: 2rem;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            font-size:  0.875rem;
-            color: #999999;
-        }
-        .tabgroup {
-            display: flex; 
-            margin-left: 0.5rem; 
-        }
-        .circle-img {
-            width: 1.125rem;
-            height: 1.2375rem;
-            margin-right: 5px;
-        }
-        .tabrow {
-            align-items: center;
-            padding: 0.7rem 0rem 0.7rem 1rem; 
-            border-top: 0.7rem solid #f0f0f0;
-            border-bottom: 1px solid #f0f0f0;
-        }
+        
+        
+        
+        
+        
         .input-css {
             border-radius: 30px;
             width: 90%;
@@ -186,38 +163,13 @@ export default {
             padding-bottom: 10px;
         }
         
-        .leftcol {
-            padding-left: 0px; 
-            padding-right: 0px; 
-            text-align: right;
-        }
+        
        
-        .modifyrow {
-            padding-top: 20px;
-            padding-bottom: 10px;
-            background: #FFF;
-        }
-        .horizontal-line {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            border-bottom: 0.8rem solid #f0f0f0;
-        }
-        .modifyimg {
-            width: 5.625rem;
-            height: 5.625rem;
-        }.rightcss {
-            text-align: left;
-            padding-left: 0.7rem;
-        } .p-bot {
-            margin-bottom: 3px;
-            font-size: 0.875rem;
-            color: #333333;
-        }
-        .p-bot-1 {
-            margin-bottom: 3px;
-            font-size: 0.875rem;
-            color: #999999;
-        }
+        
+        
+        
+        
+        
        
         .header-css {
             background-image: linear-gradient(to right, #4EBDFF, #6093FF);
@@ -285,7 +237,40 @@ export default {
             color: #FFF;
             font-size: 1.03125rem;
         }
-      
+
+
+
+        
+
+
+
+
+
+
+        .tabrow {
+            align-items: center;
+            padding: 0.7rem 0rem 0.7rem 1rem; 
+            border-top: 0.7rem solid #f0f0f0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .circle-img {
+            width: 1.125rem;
+            height: 1.2375rem;
+            margin-right: 5px;
+        }
+        .tabgroup {
+            display: flex; 
+            margin-left: 0.5rem; 
+        }
+        .common-tab {
+            width: 5rem;
+            border: 1px solid #999999;
+            border-radius: 2rem;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size:  0.875rem;
+            color: #999999;
+        }
         .common-tab1 {
             width: 5.375rem;
             border: 1px solid #999999;
@@ -308,6 +293,44 @@ export default {
         .tabgroup1 {
             display: flex; 
             justify-content: space-between;
+        }
+        .modifyrow {
+            padding-top: 20px;
+            padding-bottom: 10px;
+            background: #FFF;
+        }
+        .leftcol {
+            padding-left: 0px; 
+            padding-right: 0px; 
+            text-align: right;
+        }
+        .square-img {
+            width: 1.0625rem;
+            height: 1.0625rem;
+            margin-right: 0.7rem;
+        }
+        .modifyimg {
+            width: 5.625rem;
+            height: 5.625rem;
+        }
+        .rightcss {
+            text-align: left;
+            padding-left: 0.7rem;
+        } 
+        .p-bot {
+            margin-bottom: 3px;
+            font-size: 0.875rem;
+            color: #333333;
+        }
+        .p-bot-1 {
+            margin-bottom: 3px;
+            font-size: 0.875rem;
+            color: #999999;
+        }
+        .horizontal-line {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 0.8rem solid #f0f0f0;
         }
        
         

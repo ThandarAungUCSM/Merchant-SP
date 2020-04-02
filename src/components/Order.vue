@@ -145,13 +145,7 @@ export default {
 
 <style scoped>
     @media screen and (max-width: 767px) {
-        .text-css {
-            color: #0FA9FE;
-        }
-        .chtextimg {
-            width: 1.25rem;
-            height: 1.25rem;
-        }
+        
         .input-css {
             border-radius: 30px;
             width: 90%;
@@ -177,43 +171,11 @@ export default {
             padding-bottom: 10px;
         }
         
-        .leftcol {
-            padding-left: 0px; 
-            padding-right: 0px; 
-            text-align: right;
-        }
-        .leftcol-new {
-            text-align: left;
-        }
-        .rightcol-new {
-            padding-left: 10px;
-        }
-        .modifyrow {
-            padding-top: 20px;
-            padding-bottom: 10px;
-            background: #FFF;
-            border-top: 0.7rem solid #f0f0f0;
-        }
-        .horizontal-line {
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-        .modifyimg {
-            width: 5.625rem;
-            height: 5.625rem;
-        }.rightcss {
-            text-align: left;
-            padding-left: 0.7rem;
-        } .p-bot {
-            margin-bottom: 3px;
-            font-size: 0.875rem;
-            color: #333333;
-        }
-        .p-bot-1 {
-            margin-bottom: 3px;
-            font-size: 0.875rem;
-            color: #999999;
-        }
+        
+        
+        
+        
+        
        
         .header-css {
             background-image: linear-gradient(to right, #4EBDFF, #6093FF);
@@ -281,6 +243,58 @@ export default {
             color: #FFF;
             font-size: 1.03125rem;
         }
+        
+       
+        
+       
+
+
+
+
+
+
+
+        .modifyrow {
+            padding-top: 20px;
+            padding-bottom: 10px;
+            background: #FFF;
+            border-top: 0.7rem solid #f0f0f0;
+        }
+        .leftcol {
+            padding-left: 0px; 
+            padding-right: 0px; 
+            text-align: right;
+        }
+        .leftcol-new {
+            text-align: left;
+        }
+        .modifyimg {
+            width: 5.625rem;
+            height: 5.625rem;
+        }
+        .rightcss {
+            text-align: left;
+            padding-left: 0.7rem;
+        } 
+        .p-bot {
+            margin-bottom: 3px;
+            font-size: 0.875rem;
+            color: #333333;
+        }
+        .p-bot-1 {
+            margin-bottom: 3px;
+            font-size: 0.875rem;
+            color: #999999;
+        }
+        .horizontal-line {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .tabgroup1 {
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+        }
         .common-tab {
             width: 4.8rem;
             border: 1px solid #EC632C;
@@ -308,13 +322,17 @@ export default {
             font-size:  0.78rem;
             color: #EC632C;
         }
-       
-        .tabgroup1 {
-            display: flex; 
-            justify-content: space-between;
-            align-items: center;
+        .text-css {
+            color: #0FA9FE;
         }
-       
+        .chtextimg {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+        .rightcol-new {
+            padding-left: 10px;
+        }
+
         
     }
   

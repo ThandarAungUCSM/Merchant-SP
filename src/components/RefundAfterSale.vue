@@ -39,7 +39,7 @@
                 <b-img src="/static/images/矢量智能对象.png" class="chtextimg" alt=""></b-img> 
                 <span>状态：</span><span class="text-css">未退货退款 </span>
             </b-col>
-            <b-col cols="6">
+            <b-col cols="6" style="padding-left: 0rem;">
                 <div class="tabgroup1">
                     <div class="common-tab1">联系买家</div>
                     <div class="common-tab">查看详情</div>
@@ -76,6 +76,8 @@ export default {
 <style scoped>
 
     @media screen and (max-width: 767px) {
+        .my-new {
+        }
         .text-css {
             color: #0FA9FE;
         }
@@ -87,6 +89,7 @@ export default {
             padding-left: 0px; 
             padding-right: 0px; 
             /* text-align: right; */
+            font-size: 0.9375rem;
         }
         .modifyrow {
             padding-top: 20px;
@@ -189,7 +192,7 @@ export default {
             border-radius: 2rem;
             padding-top: 5px;
             padding-bottom: 5px;
-            font-size:  0.875rem;
+            font-size:  0.78rem;
             color: #EC632C;
         }
         .common-tab1 {
@@ -198,8 +201,9 @@ export default {
             border-radius: 2rem;
             padding-top: 5px;
             padding-bottom: 5px;
-            font-size:  0.875rem;
+            font-size:  0.78rem;
             color: #999999;
+            margin-right: 0.5rem;
         }
         .common-tab2 {
             width: 4.8rem;
@@ -213,7 +217,7 @@ export default {
         }
         .tabgroup1 {
             display: flex; 
-            justify-content: space-between;
+            justify-content: flex-end;
         }
         .tabgroup2 {
             display: flex; 

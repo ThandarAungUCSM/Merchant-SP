@@ -87,8 +87,8 @@ export default {
         align-items: center;
         padding-top: 10px;
         padding-bottom: 10px;
-        /* margin-left: 0px;
-        margin-right: 0px; */
+        margin-left: 0px;
+        margin-right: 0px;
     }
     .header-css1 {
         display: flex;

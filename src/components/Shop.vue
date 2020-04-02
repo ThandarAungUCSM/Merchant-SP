@@ -3,20 +3,20 @@
     
     <div style="position: relative;" >
         <div class="title-bgcolor">
-            <commonHeader :shopPage='shop' class="headercss"></commonHeader>
+            <commonHeader :shopPage='shop'></commonHeader>
         </div>
         <div class="row1" style="height: 0px;">
             <b-row class="body-row1">
-                <b-col>
+                <b-col cols="3">
                     <b-img src="/static/images/椭圆 1.png" class="profile-title-img" alt=""></b-img>
                 </b-col>
-                <b-col cols="7" class="headerCss">
+                <b-col cols="9" class="headerCss">
                     <p class="right-name">小天鹅官方旗舰店</p>
                     <span style="color: #999999">所在城市：上海市 徐家汇</span>
                 </b-col>
-                <b-col cols="2">
+                <!-- <b-col cols="2">
                     <b-img src="/static/images/fanhui-right.png" class="profile-right" alt=""></b-img>
-                </b-col>
+                </b-col> -->
             </b-row>
         </div> 
         
@@ -31,15 +31,15 @@
         </b-row>
         
         <b-row class="rowImg-1">
-            <b-col cols="4" class="rowcol4 vertical-col">
+            <b-col cols="4" class="rowcol4edit vertical-col">
                 <p class="today-visitors">今日访客</p>
                 <p class="today-record">03</p>
             </b-col>
-            <b-col cols="4" class="rowcol4 vertical-col">
+            <b-col cols="4" class="rowcol4edit vertical-col">
                 <p class="today-visitors">今日订单</p>
                 <p class="today-record">06</p>
             </b-col>
-            <b-col cols="4" class="rowcol4">
+            <b-col cols="4" class="rowcol4edit">
                 <p class="today-visitors">今日有效订单</p>
                 <p class="today-record">05</p>
             </b-col>
@@ -57,7 +57,6 @@
                     <span class="center-circle">5.00分</span>
                 </div>
                 <p class="project-score">项目评分</p>
-                
             </b-col>
             <b-col cols="4" class="rowcol4">
                 <div class="circle-img">
@@ -108,11 +107,12 @@ export default {
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 0 auto;
         }
         .project-score {
             font-size: 0.875rem;
             color: #666666;
-            margin-left: -15px;
+            /* margin-left: -15px; */
             margin-top: 1rem;
         }
         .shop-rating {
@@ -120,6 +120,7 @@ export default {
             color: #555555;
             text-align: left;
             margin-bottom: 0px;
+            padding-left: 15px;
         }
         .today-record {
             font-size: 1rem;
@@ -143,6 +144,10 @@ export default {
         .headercss {
             margin-left: 0px;
             margin-right: 0px;
+        }
+        .headerCss {
+            padding-left: 0px; 
+            text-align: left;
         }
         .row2 {
             background: #FFF;
@@ -177,7 +182,12 @@ export default {
             text-align: left;
         }
         .rowcol4 {
-            padding-left: 25px;
+            /* padding-left: 25px;
+            text-align: center; */
+        }
+        .rowcol4edit {
+            padding-left: 0px;
+            padding-right: 0px;
             text-align: center;
         }
         .rowImg {
@@ -218,10 +228,7 @@ export default {
             width: 8px;
             height: 15px;
         }
-        .headerCss {
-            padding-left: 0px; 
-            text-align: left;
-        }
+        
         .my-profile {
             padding-left: 0px;
             padding-right: 0px;

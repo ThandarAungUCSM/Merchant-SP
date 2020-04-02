@@ -61,6 +61,8 @@ export default {
   }
   .rightcss {
       text-align: left;
+      padding-right: 0px;
+      padding-left: 30px;
   }
   .p-bot {
       margin-bottom: 3px;

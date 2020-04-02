@@ -87,6 +87,11 @@ const router = new Router({
             component: ViewDetailMyatSu
           },//myatsu
           {
+            path: '/forget-password',
+            name: 'ForgetPassword',
+            component: ForgetPassword
+          },//error
+          {
             path: '/modifying-attribute',
             name: 'ModifyingAttribute',
             component: ModifyingAttribute
@@ -107,14 +112,14 @@ const router = new Router({
             component: CommodityConsultation
           },
           {
+            path: '/edit-shipping-address',
+            name: 'EditShippingAddress',
+            component: EditShippingAddress
+          },
+          {
             path: '/shop',
             name: 'Shop',
             component: Shop
-          },
-          {
-            path: '/forget-password',
-            name: 'ForgetPassword',
-            component: ForgetPassword
           },
           {
             path: '/pending-payment',
@@ -125,6 +130,16 @@ const router = new Router({
             path: '/to-deliver',
             name: 'TobeDeliver',
             component: TobeDeliver
+          },// can delete but
+          {
+            path: '/order',
+            name: 'Order',
+            component: Order
+          },// can delete but
+          {
+            path: '/refund-after-sale',
+            name: 'RefundAfterSale',
+            component: RefundAfterSale
           },
           {
             path: '/pending-payment-view-detail',
@@ -137,24 +152,24 @@ const router = new Router({
             component: PendingDeliveryViewDetail
           },
           {
+            path: '/calendar1',
+            name: 'calendar1',
+            component: calendar1
+          },
+          {
+            path: '/calendar2',
+            name: 'calendar2',
+            component: calendar2
+          },
+          {
             path: '/change-price',
             name: 'ChangePrice',
             component: ChangePrice
           },
           {
-            path: '/refund-after-sale',
-            name: 'RefundAfterSale',
-            component: RefundAfterSale
-          },
-          {
             path: '/1',
             name: 'temp1',
             component: temp1
-          },
-          {
-            path: '/order',
-            name: 'Order',
-            component: Order
           },
           {
             path: '/message-platform',
@@ -177,25 +192,11 @@ const router = new Router({
             component: NewShippingAddress
           },
           {
-            path: '/edit-shipping-address',
-            name: 'EditShippingAddress',
-            component: EditShippingAddress
-          },
-          {
             path: '/add-shipping-address',
             name: 'AddShippingAddress',
             component: AddShippingAddress
-          },
-          {
-            path: '/calendar1',
-            name: 'calendar1',
-            component: calendar1
-          },
-          {
-            path: '/calendar2',
-            name: 'calendar2',
-            component: calendar2
           }
+          
       ]
     }
   ]

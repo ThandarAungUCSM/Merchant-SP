@@ -1,20 +1,20 @@
 <template>
     <div>
         <b-row v-if="calendar1 != 'calendar1'" class="header-css">
-            <b-col cols="3" class="left-arrow-pos">
+            <b-col class="left-arrow-pos">
                 <b-img src="/static/images/fanhui.png" class="header-img" />
             </b-col>
 
-            <b-col cols="6" v-if="shippingAddress == 'shippingaddress'" class="shipAddress">
+            <b-col v-if="shippingAddress == 'shippingaddress'" class="shipAddress">
                 <span class="title-txt-ship"> 发货地址管理</span>
             </b-col>
-            <b-col cols="6" v-else-if="newshippingAddress == 'newshippingaddress'" class="shipAddress">
+            <b-col v-else-if="newshippingAddress == 'newshippingaddress'" class="shipAddress">
                 <span class="title-txt-ship">新建发货地址</span>
             </b-col>
-            <b-col cols="6" v-else-if="editShippingAddress == 'editShippingAddress'" class="shipAddress">
+            <b-col v-else-if="editShippingAddress == 'editShippingAddress'" class="shipAddress">
                 <span class="title-txt-ship">编辑发货地址</span>
             </b-col>
-            <b-col cols="6" v-else>
+            <b-col v-else>
                 <span class="title-txt" v-if="phoneNo == 'changephno' || changeshop == 'changeshopname'">修改手机号</span>
                 <span class="title-txt-ship" v-else-if="findPassword == 'findPwd'">找回密码</span>
                 <span class="title-txt" v-else-if="loginText == 'loginTxt'">登录</span>
@@ -30,8 +30,8 @@
                 <span class="title-txt" v-else>消息</span>
             </b-col>
 
-            <b-col cols="3" v-if="newshippingAddress == 'newshippingaddress' || editShippingAddress == 'editShippingAddress' || addShippingAddress == 'addShippingAddress'" class="rightcol">保存</b-col>
-            <b-col cols="3" v-else></b-col>
+            <b-col v-if="newshippingAddress == 'newshippingaddress' || editShippingAddress == 'editShippingAddress' || addShippingAddress == 'addShippingAddress'" class="rightcol">保存</b-col>
+            <b-col v-else></b-col>
         </b-row>
         <b-row v-else class="header-css1">
             <b-col class="left-arrow-pos">
@@ -87,8 +87,6 @@ export default {
         align-items: center;
         padding-top: 10px;
         padding-bottom: 10px;
-        /* margin-left: 0px;
-        margin-right: 0px; */
     }
     .header-css1 {
         display: flex;
@@ -115,7 +113,6 @@ export default {
     }
     .left-arrow-pos {
         text-align: left;
-        /* padding-right: 0px; */
     }
     .shipAddress {
         padding-left: 0px;

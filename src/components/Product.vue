@@ -23,15 +23,15 @@
     </b-row>
 
     <b-row class="tabrow">
-        <div >
+        <b-col cols="3" style="padding-left: 0px; padding-right: 0px;">
             <b-img src="/static/images/circle.png" class="circle-img" />
             <span>全选</span>
-        </div>
-        <div class="tabgroup">
+        </b-col>
+        <b-col cols="9" class="tabgroup">
             <div class="common-tab">上架</div>
             <div class="common-tab">下架</div>
             <div class="common-tab">删除</div>
-        </div>
+        </b-col>
     </b-row>
 
     <b-row class="modifyrow">
@@ -47,9 +47,9 @@
         </b-col>
     </b-row>
     <b-row class="horizontal-line">
-        <b-col cols="4" class="leftcol">
+        <b-col cols="3" class="leftcol">
         </b-col>
-        <b-col cols="8">
+        <b-col cols="9">
             <div class="tabgroup1">
                 <div class="common-tab1">上架</div>
                 <div class="common-tab1">下架</div>
@@ -108,18 +108,18 @@ export default {
 </script>
 
 <style scoped>
-
     @media screen and (max-width: 767px) {
-        
         .leftcol {
             padding-left: 0px; 
             padding-right: 0px; 
             text-align: right;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
         }
         .square-img {
             width: 1.0625rem;
             height: 1.0625rem;
-            margin-right: 0.7rem;
         }
         .modifyrow {
             padding-top: 20px;
@@ -135,10 +135,12 @@ export default {
         .modifyimg {
             width: 5.625rem;
             height: 5.625rem;
-        }.rightcss {
+        }
+        .rightcss {
             text-align: left;
             padding-left: 0.7rem;
-        } .p-bot {
+        } 
+        .p-bot {
             margin-bottom: 3px;
             font-size: 0.875rem;
             color: #333333;
@@ -153,14 +155,6 @@ export default {
             font-size: 1rem;
             color: #FF7800;
         }
-       
-        .header-css {
-            background-image: linear-gradient(to right, #4EBDFF, #6093FF);
-            display: flex;
-            align-items: center;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
         .header-css1 {
             background: #FFF;
             display: flex;
@@ -168,34 +162,10 @@ export default {
             padding-top: 10px;
             border-bottom: 0.8rem solid #F1F1F1;
         }
-        
-        .header-img {
-            width: 0.5625rem;
-            height: 1.03125rem;
-        }
         .circle-img {
             width: 1.125rem;
             height: 1.2375rem;
             margin-right: 5px;
-        }
-       
-       
-        .row1 {
-            margin-top: -20px; 
-        }
-        .footerCss {
-            background: #F9F9F9;
-            margin-left: 0px;
-            margin-right: 0px;
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-        }
-        .footerImg {
-            width: 40px; 
-            height: 40px;
-            margin-top: 0.5rem;
         }
         .tabActive {
             color: #0FA9FE;
@@ -218,18 +188,13 @@ export default {
             height: 3px; 
             width: 65px;
         }
-        .title-txt {
-            color: #FFF;
-            font-size: 1.03125rem;
-        }
-      
         .common-tab {
             width: 5rem;
             border: 1px solid #999999;
             border-radius: 2rem;
             padding-top: 5px;
             padding-bottom: 5px;
-            margin-right: 0.5rem;
+            margin-left: 0.5rem;
             font-size:  0.875rem;
             color: #999999;
         }
@@ -241,6 +206,7 @@ export default {
             padding-bottom: 5px;
             font-size:  0.875rem;
             color: #999999;
+            margin-left: 0.6rem;
         }
         .common-tab2 {
             width: 4.8rem;
@@ -254,11 +220,12 @@ export default {
         }
         .tabgroup {
             display: flex; 
-            margin-left: 1rem; 
+            padding-left: 0px; 
+            padding-right: 15px;
         }
         .tabgroup1 {
             display: flex; 
-            justify-content: space-between;
+            justify-content: flex-end;
         }
         .tabgroup2 {
             display: flex; 
@@ -266,7 +233,7 @@ export default {
         }
         .tabrow {
             align-items: center;
-            padding: 0.7rem 0rem 0.7rem 1rem; 
+            padding: 0.7rem 0rem 0.7rem 0rem; 
         }
         
     }
