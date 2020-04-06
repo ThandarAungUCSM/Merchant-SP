@@ -164,7 +164,7 @@ export default {
     padding-left: 0px;
     padding-right: 0px;
     max-width: 46.875rem;
-    max-height: 25.4375‬rem;
+    max-height: 25.4375rem;
   }
   .title-bgcolor {
     padding-top: 3rem;
@@ -269,6 +269,130 @@ export default {
   }
 }
 
+@media screen and (max-width: 1366px) and (min-width: 768px) {
+  .datap {
+    font-size: 1.125rem;
+    color: #000000;
+  }
+  .datap1 {
+    font-size: 0.8125rem;
+    color: #888888;
+  }
+  .p-menu {
+    color: #000000;
+    font-size: 0.8125rem;
+  }
+  .txtrow3 {
+    font-size: 0.75rem;
+  }
+  .home {
+    padding-left: 0px;
+    padding-right: 0px;
+    max-height: 25.4375rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  .title-bgcolor {
+    padding-top: 3rem;
+    background-image: linear-gradient(to right, #4DBEFF, #6093FF);           
+    padding-bottom: 20px;
+  }
+  .title-row1 {
+    display: flex;
+    padding: 1rem 13px 1rem 13px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .title-row2 {
+    margin: 0 1rem 0 1rem;
+    color: #FFF;
+  }
+  .title-img {
+    width: 2.625rem;
+    height: 2.625rem;
+  }
+  .scan-img {
+    width: 1.31rem;
+    height: 1.31rem;
+  }
+  .body-bgcolor {
+    padding-top: 10px;
+    background: #F2F3F6;
+
+    padding-top: 65px;
+    padding-bottom: 100px;
+  }
   
+  .body-row1 {
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 15px 15px 15px 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .body-row2 {
+    background: #FFF;
+    padding: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .body-row2-title {
+    padding-left: 15px;
+  }
+  .vertical-line {
+    height: 25px;
+    border: 0.5px solid #DBD6D6;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+  .right-txt {
+    font-size: 0.9375rem;
+    color: #333333;
+  }
+  .title-group1 {
+    font-size: 0.9375rem;
+    color: #333333;
+    font-weight: bold;
+    padding-bottom: 1rem;
+  }
+  .title-group2 {
+    font-size: 0.9375rem;
+    color: #333333;
+    font-weight: bold;
+  }
+  .body-row3 {
+    background: #FFF;
+    padding: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .body-row3-row1{
+    margin-top: 1rem;
+  }
+  .row3-p {
+    font-size: 1.0625rem;
+    margin-bottom: 0px;
+  }
+  .row1 {
+    margin-top: -20px; 
+  }
+ 
+  .title-size {
+    font-size: 1.0625rem;
+    color: #FFF;
+  }
+  .left-img {
+    width: 2.384375rem;
+    height: 1rem;
+  }
+}  
   
 </style>
