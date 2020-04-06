@@ -41,6 +41,23 @@ export default {
       background-image: linear-gradient(to right, #4EBDFF, #6093FF);
   }
   .zerocss {
+      font-size: 2.375rem;
+      color: #FFF;
+  }
+}
+
+@media screen and (max-width: 1366px) and (min-width: 768px) {
+  .container {
+      width: 100%;
+      max-width: 100%;
+  }
+  .modifyrow {
+      margin-top: -2px;
+      padding-top: 21px;
+      padding-bottom: 30px;
+      background-image: linear-gradient(to right, #4EBDFF, #6093FF);
+  }
+  .zerocss {
     font-size: 2.375rem;
     color: #FFF;
   }
