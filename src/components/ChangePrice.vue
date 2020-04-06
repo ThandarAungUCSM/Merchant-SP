@@ -2,7 +2,7 @@
   <b-container>
     <commonHeader :changePrice="price"></commonHeader>
     <b-row class="modifyrow">
-        <b-col cols="3" style="padding-right: 0px; padding-left: 10px;">
+        <b-col cols="3" class="ipadcss">
             <b-img src="/static/images/圆角矩形 12.png" class="modifyimg" alt=""></b-img>  
         </b-col>
         <b-col cols="9" class="rightcss" style="padding-right: 10px; padding-left: 20px;">
@@ -110,6 +110,11 @@ export default {
   .container {
     width: 100%;
     max-width: 100%;
+  }
+  .ipadcss {
+    padding-left: 15px;
+    text-align: left;
+    padding-right: 0px;
   }
   .modifyimg {
       width: 5.625rem;

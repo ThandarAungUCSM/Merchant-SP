@@ -50,7 +50,7 @@ const router = new Router({
             path: '/login',
             name: 'Login',
             component: Login
-          },
+          },//chit su
           {
             path: '/my-new',
             name: 'MyNew',
@@ -125,7 +125,7 @@ const router = new Router({
             path: '/calendar1',
             name: 'calendar1',
             component: calendar1
-          },
+          },//need to add calendar (may be date picker)
           {
             path: '/calendar2',
             name: 'calendar2',
@@ -165,7 +165,7 @@ const router = new Router({
             path: '/add-shipping-address',
             name: 'AddShippingAddress',
             component: AddShippingAddress
-          },
+          },// need to hide popup when click other place
           {
             path: '/change-ph-no',
             name: 'ChangePhoneNo',

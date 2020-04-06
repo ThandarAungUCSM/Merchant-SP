@@ -128,7 +128,8 @@ export default {
   }
   .imgcol3 {
     padding-right: 0px; 
-    padding-left: 10px;
+    padding-left: 15px;
+    text-align: left;
   }
   .modifyimg {
       width: 5.625rem;

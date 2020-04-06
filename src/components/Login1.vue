@@ -11,28 +11,28 @@
     <commonHeader :loginText="loginTxt"></commonHeader>
     <b-row class="user" >
         <b-col class="left-col-pos1">
-            <div class="username">输入账号</div>
+            <span class="username">输入账号</span>
             <input class="text" 
                 type="text"
                 v-model="user_name"
             >
         </b-col>
     </b-row>
-    <!--<b-row>
+    <b-row>
         <b-col class="hrcss"></b-col>
-    </b-row>-->
+    </b-row>
     <b-row class="pass">
         <b-col class="left-col-pos">
-            <div class="password">密码</div>
+            <span class="password">密码</span>
             <input class="text1" 
                 :type="passwordFieldType"
                 v-model="pass_word">
             <b-img @click="switchVisibility" :src="eyeimg" v-bind:class="[eyeimg == '/static/images/eye.png' ? 'eye-img' : 'openeye-img']" />
         </b-col>
     </b-row>
-   <!-- <b-row>
+    <b-row>
         <b-col class="hrcss"></b-col>
-    </b-row>-->
+    </b-row>
     <b-row class="forgetpwd">
         <b-col @click="cipherLayer"><span class="footer">忘记密码</span></b-col>
     </b-row>
@@ -252,7 +252,7 @@ export default {
             this.$HTTP(this.$httpConfig.parseReqByPassword, {
                 password: this.ruleForm2.pass,
                 password_again: this.ruleForm2.checkPass,
-                code: this.ruleForm2.check_code
+                mobile: this.ruleForm2.check_code
             })
                 .then(res => {
                     this.$message({
@@ -262,6 +262,7 @@ export default {
                     this.close();
                 })
                 .catch(res => {
+                    alert(res.data.message)
                     this.$message({
                         message: res.data.message,
                         type: "error"
@@ -414,92 +415,98 @@ export default {
 
 <style scoped>
     @media screen and (max-width: 767px) {
+        /* .login {
+
+        } */
+        /* .header-css {
+            background: cyan;
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        } */
+        /* .header-img {
+            width: 20px;
+            height: 30px;
+        } */
+
         .user{
-          font-size: .26rem;
-          padding: 1rem 0;
-          margin: 0 .1rem;
-          border-bottom: .04rem solid #dee2e6;
+            font-size: 13px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            /* border-bottom: .01rem solid #D1D7DC; */
+            padding: 1rem;
         }
         .pass{
-          font-size: .26rem;
-          padding: 1rem 0;
-          margin: 0 .1rem;
-          border-bottom: .04rem solid #dee2e6;
+            font-size: 13px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            /* border-bottom: .01rem solid #D1D7DC; */
+            padding: 1rem;
         }
         .username{
             color: #707070;
-            padding: 0 .8rem 0 0;
-            font-size: 1rem;
+            margin-right: 1.7rem;
+            font-size: 15px;
         }
 
         .text {
             border: none;
             outline: none;
-            font-size: 1rem;
-            width: 70%;
-
+            background:#F0F0F0;
         }
         
         .password{
             color: #707070;
-            font-size: 1rem;
-            padding: 0 2.5rem 0 0;
+            font-size: 15px;
         }
        .text1{
             border: none;
             outline: none;
-            font-size: 1rem;
-            width: 59%;
-
+            background:#F0F0F0;
         }
         .eye-img{
-            height: .5rem;
-          margin: .5rem 0 0 1rem;
-
+            height: 10px;
+            margin-left:1.5rem;
         }
         .openeye-img {
-            height: .8rem;
-          margin: .5rem 0 0 1rem;
-
+            height: 30px; 
+            margin-left:1.5rem; 
         }
         .footer {
             color: #000;
             float: right;
-          font-size: 1rem;
         }
 
         .click{
             background:#f1f1f1;
-            margin: 0 .2rem 0 .2rem;
+            margin: 0px 10px 0px 10px;
         }
         .click-me{
-            font-size: 1rem;
-            color: white;
+            font-size: 20px;
+            color: #707070;
             border: none;
             background: #23B8FF;
             width: 100%;
             outline: none;
-            padding: .8rem 0 .8rem 0;
-            border-radius: .06rem;
-
+            padding: 1rem 0rem 1rem 0rem;
+            border-radius: 3px;
+            color: #66CDFF;
         }
         .forgetpwd {
-            padding: 2rem 0 1rem 0;
+            padding: 2rem 0rem 1rem 0rem;
         }
         .left-col-pos1 {
-          display: flex;
+            text-align: left;
         }
         .left-col-pos {
             display: flex;
-
-            /*align-items: center;*/
+            justify-content: space-between;
+            align-items: center;
         }
         .hrcss {
-            border: .02rem solid #EAEAE9;
-            margin: 0 .6rem 0 .6rem;
+            border: 1px solid #EAEAE9; 
+            margin: 0 30px 0 30px;
         }
-       /* input{
-          background-color: red !important;
-        }*/
     }
 </style>

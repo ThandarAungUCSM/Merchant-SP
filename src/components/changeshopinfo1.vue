@@ -8,7 +8,7 @@
                 </div>
                 <div id="myBtn" @click="myBtn" >
                     <img src="/static/images/profile.png" class="pp-img">
-                    <img src="/static/images/back.png" class="leftarrowImg">
+                    <img src="/static/images/arrow.png" class="leftarrowImg">
                 </div>
           </div>
           <div class="fange"></div>
@@ -16,7 +16,7 @@
                 <div><p class="">店铺名称</p></div>
                 <div>
                   <span class="padright">小天鹅官方旗舰店</span>
-                  <img src="/static/images/back.png" class="leftarrowImg">
+                  <img src="/static/images/arrow.png" class="leftarrowImg">
                 </div>
           </div>
           <div class="shopname">
@@ -25,12 +25,12 @@
                 </div>
                 <div>
                   <span class="padright">15675999803</span>
-                  <img src="/static/images/back.png" class="leftarrowImg">
+                  <img src="/static/images/arrow.png" class="leftarrowImg">
                 </div>
           </div>
           <div class="shopname" style="border:none;">
                 <p class="">登录密码</p>
-                <img src="/static/images/back.png" class="leftarrowImg">
+                <img src="/static/images/arrow.png" class="leftarrowImg">
           </div>
       </div>
       <div id="myModal" class="modal">
@@ -89,7 +89,7 @@ export default {
         color: #989898;
     }
     .shopinfo{
-      border-bottom: #dee2e6 0.04rem solid;
+        border-bottom: #fbfbfb 0.2rem solid; 
         padding: 1rem 0 1rem 0rem;
 
         display: flex;
@@ -102,7 +102,7 @@ export default {
         padding-top: 1rem;
         display: flex;
         justify-content: space-between;
-      border-bottom: #dee2e6 0.04rem solid;
+        border-bottom: #fbfbfb 0.2rem solid; 
         font-size: 0.875rem;
         color: #333333;
     }
@@ -113,8 +113,8 @@ export default {
       height: 5.236rem;
     }
     .leftarrowImg {
-      width: 0.5rem;
-      height: 0.7rem;
+      width: 0.366rem; 
+      height: 0.659rem;
     }
     .padright {
       padding-right: 10px; 

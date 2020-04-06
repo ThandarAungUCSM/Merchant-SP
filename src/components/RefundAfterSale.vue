@@ -86,9 +86,9 @@ export default {
             height: 1.25rem;
         }
         .leftcol {
-            padding-left: 0px; 
+            padding-left: 15px; 
             padding-right: 0px; 
-            /* text-align: right; */
+            text-align: left;
             font-size: 0.9375rem;
         }
         .modifyrow {

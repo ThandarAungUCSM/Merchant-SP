@@ -61,7 +61,7 @@ export default {
 @media screen and (max-width: 767px) {
     .forgotpassword{
         background: #ffffff;
-        padding: 2rem 1.5rem 5rem 1.5rem;
+        padding: 2rem 1.5rem;
     }
     .accno,.phno,.verifycode,.newpassword,.re-enter{
         padding: 1rem 0 0.5rem 0;

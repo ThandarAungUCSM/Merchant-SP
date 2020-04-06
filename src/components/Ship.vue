@@ -2,7 +2,7 @@
   <b-container>
     <commonHeader :shipPage="ship"></commonHeader>
     <b-row class="modifyrow">
-        <b-col cols="3">
+        <b-col cols="3" class="ipadcss">
             <b-img src="/static/images/圆角矩形 12.png" class="modifyimg" alt=""></b-img>  
         </b-col>
         <b-col cols="9" class="rightcss">
@@ -124,6 +124,9 @@ export default {
   .container {
     width: 100%;
     max-width: 100%;
+  }
+  .ipadcss {
+    text-align: left;
   }
   .modifyimg {
       width: 5.625rem;

@@ -894,9 +894,9 @@ export default {
             border-top: 0.7rem solid #f0f0f0;
         }
         .orderleftcol {
-            padding-left: 5px; 
+            padding-left: 15px; 
             padding-right: 0px; 
-            text-align: right;
+            text-align: left;
         }
         .orderleftcol-new {
             text-align: left;
