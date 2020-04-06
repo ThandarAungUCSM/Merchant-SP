@@ -120,7 +120,7 @@ const router = new Router({
             path: '/pending-delivery-view-detail',
             name: 'PendingDeliveryViewDetail',
             component: PendingDeliveryViewDetail
-          },
+          },//
           {
             path: '/calendar1',
             name: 'calendar1',

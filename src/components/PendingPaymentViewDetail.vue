@@ -130,7 +130,6 @@ export default {
 
 <style scoped>
     @media screen and (max-width: 767px) {
-        
         .modal-footer {
             display: flex;
             justify-content: space-between;
@@ -246,51 +245,47 @@ export default {
 
 
         .modal-mask {
-        position: fixed;
-        z-index: 9998;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        display: table;
-        transition: opacity 0.3s ease;
+            position: fixed;
+            z-index: 9998;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: table;
+            transition: opacity 0.3s ease;
         }
 
         .modal-wrapper {
-        display: table-cell;
-        vertical-align: middle;
+            display: table-cell;
+            vertical-align: middle;
         }
 
         .modal-container {
-        width: 300px;
-        margin: 0px auto;
-        /* padding: 20px 30px; */
-        background-color: #fff;
-        border-radius: 2px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
-        transition: all 0.3s ease;
-        font-family: Helvetica, Arial, sans-serif;
+            width: 300px;
+            margin: 0px auto;
+            /* padding: 20px 30px; */
+            background-color: #fff;
+            border-radius: 2px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+            transition: all 0.3s ease;
+            font-family: Helvetica, Arial, sans-serif;
 
-        border-radius: 0.7rem;
+            border-radius: 0.7rem;
         }
 
         .modal-header h3 {
-        margin-top: 0;
-        color: #42b983;
+            margin-top: 0;
+            color: #42b983;
         }
 
         .modal-body {
-        margin: 0px 0px;
-        padding: 0rem 1rem;
+            margin: 0px 0px;
+            padding: 0rem 1rem;
         }
 
         .modal-default-button {
-        float: right;
-        }
-
-        .modal-footer {
-            margin: 0rem;
+            float: right;
         }
 
         /*
@@ -303,21 +298,19 @@ export default {
         */
 
         .modal-enter {
-        opacity: 0;
+            opacity: 0;
         }
 
         .modal-leave-active {
-        opacity: 0;
+            opacity: 0;
         }
 
         .modal-enter .modal-container,
         .modal-leave-active .modal-container {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
         }
     } 
-
-
     @media screen and (max-width: 1366px) {
         .container {
             width: 100%;
@@ -328,7 +321,7 @@ export default {
             display: flex;
             justify-content: space-between;
             margin: 0px !important;
-            padding: 0px !important;
+            padding: 0rem !important;
         }
         .color {
             color: #999999;
@@ -441,52 +434,50 @@ export default {
 
 
         .modal-mask {
-        position: fixed;
-        z-index: 9998;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        display: table;
-        transition: opacity 0.3s ease;
+            position: fixed;
+            z-index: 9998;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: table;
+            transition: opacity 0.3s ease;
         }
 
         .modal-wrapper {
-        display: table-cell;
-        vertical-align: middle;
+            display: table-cell;
+            vertical-align: middle;
         }
 
         .modal-container {
-        width: 300px;
-        margin: 0px auto;
-        /* padding: 20px 30px; */
-        background-color: #fff;
-        border-radius: 2px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
-        transition: all 0.3s ease;
-        font-family: Helvetica, Arial, sans-serif;
+            width: 70%;
+            margin: 0px auto;
+            /* padding: 20px 30px; */
+            background-color: #fff;
+            border-radius: 2px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+            transition: all 0.3s ease;
+            font-family: Helvetica, Arial, sans-serif;
 
-        border-radius: 0.7rem;
+            border-radius: 0.7rem;
         }
 
         .modal-header h3 {
-        margin-top: 0;
-        color: #42b983;
+            margin-top: 0;
+            color: #42b983;
         }
 
         .modal-body {
-        margin: 0px 0px;
-        padding: 0rem 1rem;
+            margin: 0px 0px;
+            padding: 0rem 1rem;
         }
 
         .modal-default-button {
-        float: right;
+            float: right;
         }
 
-        .modal-footer {
-            margin: 0rem;
-        }
+        
 
         /*
         * The following styles are auto-applied to elements with
@@ -498,17 +489,17 @@ export default {
         */
 
         .modal-enter {
-        opacity: 0;
+            opacity: 0;
         }
 
         .modal-leave-active {
-        opacity: 0;
+            opacity: 0;
         }
 
         .modal-enter .modal-container,
         .modal-leave-active .modal-container {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
         }
     } 
 </style>
