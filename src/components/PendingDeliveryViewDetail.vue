@@ -127,10 +127,11 @@ export default {
       width: 20%;
       float: left;
       padding: 1rem 0rem;
+      margin-right: 1rem;
   }
   .detail p{
       text-align: left;
-      padding: 0.8rem 0 0 5.5rem;
+      padding: 0.8rem 0 0 2rem;
       color: #333333;
       font-size: 0.875rem;
   }
@@ -170,5 +171,99 @@ export default {
       color: #13A4EF;
       font-size: 1rem;
   }
+} 
+
+@media screen and (max-width: 1366px) and (min-width: 768px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+    .modal-footer {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+    .color {
+        color: #999999;
+        font-size: 0.8125rem;
+    }
+    .second-row {
+        padding-top: 13px;
+        padding-bottom: 13px;
+        background: #E4E4E4;
+    }
+    .header-css {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .left-arrow-pos {
+        text-align: left;
+    }
+    .header-img {
+        width: 0.5625rem;
+        height: 1.03125rem;
+    }
+    .headermid {
+        font-size: 1.125rem;
+    }
+    .orderinfo {
+        font-size: 1rem;
+        color: #333333;
+        text-align: left;
+    }
+    .detail{
+        display: inline-block;
+        background: #fff;
+        width: 100%;
+    }
+    .detail img{
+        width: 20%;
+        float: left;
+        padding: 1rem 0rem;
+        margin-right: 1rem;
+    }
+    .detail p{
+        text-align: left;
+        padding: 0.8rem 0 0 2rem;
+        color: #333333;
+        font-size: 0.875rem;
+    }
+    .specification{
+        color:#d8d8d8;
+        margin-top: -2.5rem;
+    }
+    .price{
+        float: right;
+        padding-right: 1rem;
+        color: #8B8886;
+        font-size: 0.875rem;
+    }
+    .total{
+        font-size: 1.3rem;
+        text-align: right;
+        background: #ffffff;
+    }
+    b{
+        font-weight: 100;
+        font-size: 1.1rem;
+        color: #f29674;
+    }
+    .info{
+        text-align: left;
+        background: #ffffff;
+        padding-top: 1.2rem;
+    }
+    .info p{
+        padding: 0.01rem 0 1rem 0;
+        color:#666666;
+        font-size: 0.875rem;
+    }
+    .check-btn{
+        border-top: 1.5rem solid #F0F0F0;
+        padding: 1rem 0;
+        color: #13A4EF;
+        font-size: 1rem;
+    }
 } 
 </style>
