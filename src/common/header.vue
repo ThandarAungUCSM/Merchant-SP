@@ -137,7 +137,7 @@ export default {
             padding-right: 0px;
         }
     }
-    @media screen and (max-width: 1366px) {
+    @media screen and (max-width: 1366px) and (min-width: 768px) {
         .rightcol {
             color: #FFF;
             text-align: right;
