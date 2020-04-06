@@ -129,193 +129,388 @@ export default {
 </script>
 
 <style scoped>
-@media screen and (max-width: 767px) {
-    
-    .modal-footer {
-        display: flex;
-        justify-content: space-between;
-        margin: 0px !important;
-        padding: 0px !important;
-    }
-    .color {
-        color: #999999;
-        font-size: 0.8125rem;
-    }
-    .second-row {
-        padding-top: 13px;
-        padding-bottom: 13px;
-        background: #E4E4E4;
-    }
-    .first-row {
-        background: #FEF0E7;
-        padding-top: 13px;
-        padding-bottom: 13px;
-    }
-    .first-row-col {
-        text-align: left;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    .header-css {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .clock-img {
-        width: 0.9375rem;
-        height: 0.9375rem;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    .firsttxt {
-        font-size: 1.0625rem;
-        color: #F65700;
-    }
-    .firsttxt2 {
-        font-size: 0.9375rem;
-        color: #7C7A79;
-    }
-    .left-arrow-pos {
-        text-align: left;
-    }
-    .header-img {
-        width: 0.5625rem;
-        height: 1.03125rem;
-    }
-    .headermid {
-        font-size: 1.125rem;
-    }
-    .orderinfo {
-        font-size: 1rem;
-        color: #333333;
-        text-align: left;
-    }
-  .detail{
-       display: inline-block;
-       background: #fff;
-  }
-  .detail img{
-      width: 20%;
-      float: left;
-      padding: 1rem 0rem;
-  }
-  .detail p{
-      text-align: left;
-      padding: 0.8rem 0 0 5.5rem;
-      color: #333333;
-      font-size: 0.875rem;
-  }
-  .specification{
-      color:#d8d8d8;
-      margin-top: -2.5rem;
-  }
-  .price{
-      float: right;
-      padding-right: 1rem;
-      color: #8B8886;
-      font-size: 0.875rem;
-  }
-  .total{
-    font-size: 1.3rem;
-    text-align: right;
-    background: #ffffff;
-  }
-  b{
-      font-weight: 100;
-      font-size: 1.1rem;
-     color: #f29674;
-  }
-  .info{
-      text-align: left;
-      background: #ffffff;
-      padding-top: 1.2rem;
-  }
-  .info p{
-      padding: 0.01rem 0 1rem 0;
-      color:#666666;
-      font-size: 0.875rem;
-  }
-  .check-btn{
-      border-top: 1.5rem solid #F0F0F0;
-      padding: 1rem 0;
-      color: #13A4EF;
-      font-size: 1rem;
-      margin-bottom: 3rem;
-  }
+    @media screen and (max-width: 767px) {
+        
+        .modal-footer {
+            display: flex;
+            justify-content: space-between;
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+        .color {
+            color: #999999;
+            font-size: 0.8125rem;
+        }
+        .second-row {
+            padding-top: 13px;
+            padding-bottom: 13px;
+            background: #E4E4E4;
+        }
+        .first-row {
+            background: #FEF0E7;
+            padding-top: 13px;
+            padding-bottom: 13px;
+        }
+        .first-row-col {
+            text-align: left;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .header-css {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .clock-img {
+            width: 0.9375rem;
+            height: 0.9375rem;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .firsttxt {
+            font-size: 1.0625rem;
+            color: #F65700;
+        }
+        .firsttxt2 {
+            font-size: 0.9375rem;
+            color: #7C7A79;
+        }
+        .left-arrow-pos {
+            text-align: left;
+        }
+        .header-img {
+            width: 0.5625rem;
+            height: 1.03125rem;
+        }
+        .headermid {
+            font-size: 1.125rem;
+        }
+        .orderinfo {
+            font-size: 1rem;
+            color: #333333;
+            text-align: left;
+        }
+        .detail{
+            display: inline-block;
+            background: #fff;
+        }
+        .detail img{
+            width: 20%;
+            float: left;
+            padding: 1rem 0rem;
+        }
+        .detail p{
+            text-align: left;
+            padding: 0.8rem 0 0 5.5rem;
+            color: #333333;
+            font-size: 0.875rem;
+        }
+        .specification{
+            color:#d8d8d8;
+            margin-top: -2.5rem;
+        }
+        .price{
+            float: right;
+            padding-right: 1rem;
+            color: #8B8886;
+            font-size: 0.875rem;
+        }
+        .total{
+            font-size: 1.3rem;
+            text-align: right;
+            background: #ffffff;
+        }
+        b{
+            font-weight: 100;
+            font-size: 1.1rem;
+            color: #f29674;
+        }
+        .info{
+            text-align: left;
+            background: #ffffff;
+            padding-top: 1.2rem;
+        }
+        .info p{
+            padding: 0.01rem 0 1rem 0;
+            color:#666666;
+            font-size: 0.875rem;
+        }
+        .check-btn{
+            border-top: 1.5rem solid #F0F0F0;
+            padding: 1rem 0;
+            color: #13A4EF;
+            font-size: 1rem;
+            margin-bottom: 3rem;
+        }
 
 
 
 
-.modal-mask {
-  position: fixed;
-  z-index: 9998;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: table;
-  transition: opacity 0.3s ease;
-}
+        .modal-mask {
+        position: fixed;
+        z-index: 9998;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: table;
+        transition: opacity 0.3s ease;
+        }
 
-.modal-wrapper {
-  display: table-cell;
-  vertical-align: middle;
-}
+        .modal-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+        }
 
-.modal-container {
-  width: 300px;
-  margin: 0px auto;
-  /* padding: 20px 30px; */
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
-  transition: all 0.3s ease;
-  font-family: Helvetica, Arial, sans-serif;
+        .modal-container {
+        width: 300px;
+        margin: 0px auto;
+        /* padding: 20px 30px; */
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+        transition: all 0.3s ease;
+        font-family: Helvetica, Arial, sans-serif;
 
-  border-radius: 0.7rem;
-}
+        border-radius: 0.7rem;
+        }
 
-.modal-header h3 {
-  margin-top: 0;
-  color: #42b983;
-}
+        .modal-header h3 {
+        margin-top: 0;
+        color: #42b983;
+        }
 
-.modal-body {
-  margin: 0px 0px;
-  padding: 0rem 1rem;
-}
+        .modal-body {
+        margin: 0px 0px;
+        padding: 0rem 1rem;
+        }
 
-.modal-default-button {
-  float: right;
-}
+        .modal-default-button {
+        float: right;
+        }
 
-.modal-footer {
-    margin: 0rem;
-}
+        .modal-footer {
+            margin: 0rem;
+        }
 
-/*
- * The following styles are auto-applied to elements with
- * transition="modal" when their visibility is toggled
- * by Vue.js.
- *
- * You can easily play with the modal transition by editing
- * these styles.
- */
+        /*
+        * The following styles are auto-applied to elements with
+        * transition="modal" when their visibility is toggled
+        * by Vue.js.
+        *
+        * You can easily play with the modal transition by editing
+        * these styles.
+        */
 
-.modal-enter {
-  opacity: 0;
-}
+        .modal-enter {
+        opacity: 0;
+        }
 
-.modal-leave-active {
-  opacity: 0;
-}
+        .modal-leave-active {
+        opacity: 0;
+        }
 
-.modal-enter .modal-container,
-.modal-leave-active .modal-container {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-} 
+        .modal-enter .modal-container,
+        .modal-leave-active .modal-container {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        }
+    } 
+
+
+    @media screen and (max-width: 1366px) {
+        .container {
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        .modal-footer {
+            display: flex;
+            justify-content: space-between;
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+        .color {
+            color: #999999;
+            font-size: 0.8125rem;
+        }
+        .second-row {
+            padding-top: 13px;
+            padding-bottom: 13px;
+            background: #E4E4E4;
+        }
+        .first-row {
+            background: #FEF0E7;
+            padding-top: 13px;
+            padding-bottom: 13px;
+        }
+        .first-row-col {
+            text-align: left;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .header-css {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .clock-img {
+            width: 0.9375rem;
+            height: 0.9375rem;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .firsttxt {
+            font-size: 1.0625rem;
+            color: #F65700;
+        }
+        .firsttxt2 {
+            font-size: 0.9375rem;
+            color: #7C7A79;
+        }
+        .left-arrow-pos {
+            text-align: left;
+        }
+        .header-img {
+            width: 0.5625rem;
+            height: 1.03125rem;
+        }
+        .headermid {
+            font-size: 1.125rem;
+        }
+        .orderinfo {
+            font-size: 1rem;
+            color: #333333;
+            text-align: left;
+        }
+        .detail{
+            display: inline-block;
+            background: #fff;
+            width: 100%;
+        }
+        .detail img{
+            width: 20%;
+            float: left;
+            padding: 1rem 0rem;
+            margin-right: 1rem;
+        }
+        .detail p{
+            text-align: left;
+            padding: 0.8rem 0 0 5.5rem;
+            color: #333333;
+            font-size: 0.875rem;
+        }
+        .specification{
+            color:#d8d8d8;
+            margin-top: -2.5rem;
+        }
+        .price{
+            float: right;
+            padding-right: 1rem;
+            color: #8B8886;
+            font-size: 0.875rem;
+        }
+        .total{
+            font-size: 1.3rem;
+            text-align: right;
+            background: #ffffff;
+        }
+        b{
+            font-weight: 100;
+            font-size: 1.1rem;
+            color: #f29674;
+        }
+        .info{
+            text-align: left;
+            background: #ffffff;
+            padding-top: 1.2rem;
+        }
+        .info p{
+            padding: 0.01rem 0 1rem 0;
+            color:#666666;
+            font-size: 0.875rem;
+        }
+        .check-btn{
+            border-top: 1.5rem solid #F0F0F0;
+            padding: 1rem 0;
+            color: #13A4EF;
+            font-size: 1rem;
+            margin-bottom: 3rem;
+        }
+
+
+
+
+        .modal-mask {
+        position: fixed;
+        z-index: 9998;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: table;
+        transition: opacity 0.3s ease;
+        }
+
+        .modal-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+        }
+
+        .modal-container {
+        width: 300px;
+        margin: 0px auto;
+        /* padding: 20px 30px; */
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+        transition: all 0.3s ease;
+        font-family: Helvetica, Arial, sans-serif;
+
+        border-radius: 0.7rem;
+        }
+
+        .modal-header h3 {
+        margin-top: 0;
+        color: #42b983;
+        }
+
+        .modal-body {
+        margin: 0px 0px;
+        padding: 0rem 1rem;
+        }
+
+        .modal-default-button {
+        float: right;
+        }
+
+        .modal-footer {
+            margin: 0rem;
+        }
+
+        /*
+        * The following styles are auto-applied to elements with
+        * transition="modal" when their visibility is toggled
+        * by Vue.js.
+        *
+        * You can easily play with the modal transition by editing
+        * these styles.
+        */
+
+        .modal-enter {
+        opacity: 0;
+        }
+
+        .modal-leave-active {
+        opacity: 0;
+        }
+
+        .modal-enter .modal-container,
+        .modal-leave-active .modal-container {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        }
+    } 
 </style>
 
 
