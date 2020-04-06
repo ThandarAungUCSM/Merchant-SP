@@ -311,7 +311,7 @@ export default {
             transform: scale(1.1);
         }
     } 
-    @media screen and (max-width: 1366px) {
+    @media screen and (max-width: 1366px) and (min-width: 768px) {
         .container {
             width: 100%;
             max-width: 100%;
@@ -321,7 +321,7 @@ export default {
             display: flex;
             justify-content: space-between;
             margin: 0px !important;
-            padding: 0rem !important;
+            padding: 1rem !important;
         }
         .color {
             color: #999999;
@@ -470,7 +470,7 @@ export default {
 
         .modal-body {
             margin: 0px 0px;
-            padding: 0rem 1rem;
+            padding: 1rem 1rem;
         }
 
         .modal-default-button {
