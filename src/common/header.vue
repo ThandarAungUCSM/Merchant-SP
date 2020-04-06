@@ -1,7 +1,7 @@
 <template>
     <div>
-        <b-row v-if="calendar1 != 'calendar1'" class="header-css">
-            <b-col cols="3" class="left-arrow-pos">
+        <b-row v-if="calendar1 != 'calendar1'" :class="shopPage == 'shop' ? 'shopheader-css' : 'header-css'">
+            <b-col cols="3" :class="shopPage == 'shop' ? 'shopleft-arrow-pos' : 'left-arrow-pos'">
                 <b-img src="/static/images/fanhui.png" class="header-img" />
             </b-col>
 
@@ -93,6 +93,14 @@ export default {
             /* margin-left: 0px;
             margin-right: 0px; */
         }
+        .shopheader-css {
+            background-image: linear-gradient(to right, #4EBDFF, #6093FF);
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 100%;
+        }
         .header-css1 {
             display: flex;
             align-items: center;
@@ -119,6 +127,10 @@ export default {
         .left-arrow-pos {
             text-align: left;
             /* padding-right: 0px; */
+        }
+        .shopleft-arrow-pos {
+            text-align: left;
+            padding-left: 30px;
         }
         .shipAddress {
             padding-left: 0px;
@@ -139,6 +151,14 @@ export default {
             /* margin-left: 0px;
             margin-right: 0px; */
         }
+        .shopheader-css {
+            background-image: linear-gradient(to right, #4EBDFF, #6093FF);
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 100%;
+        }
         .header-css1 {
             display: flex;
             align-items: center;
@@ -165,6 +185,10 @@ export default {
         .left-arrow-pos {
             text-align: left;
             /* padding-right: 0px; */
+        }
+        .shopleft-arrow-pos {
+            text-align: left;
+            padding-left: 30px;
         }
         .shipAddress {
             padding-left: 0px;
