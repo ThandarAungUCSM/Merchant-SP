@@ -65,7 +65,7 @@ const router = new Router({
             path: '/modifying-attribute',
             name: 'ModifyingAttribute',
             component: ModifyingAttribute
-          },//
+          },
           {
             path: '/ship',
             name: 'Ship',
