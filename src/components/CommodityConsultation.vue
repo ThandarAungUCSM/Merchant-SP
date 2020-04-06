@@ -301,5 +301,208 @@ export default {
         }
         
     }
+
+
+    @media screen and (max-width: 1366px) {
+        .container {
+            width: 100%;
+            max-width: 100%;
+        } 
+        .reply-btn {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .right-btn {
+            width: 5rem;
+            border: 1px solid #DDDDDD;
+            text-align: center;
+            border-radius: 2.5rem;
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+        .datecss {
+            font-size: 0.875rem;
+        }
+        .datetimecss {
+            font-size: 0.75rem;
+            color: #888888;
+        }
+        .p1 {
+            color: #333333;
+            padding-bottom: 5px;
+        }
+        .p2 {
+            color: #59A2FF;
+        }
+        .p3 {
+            color: #E9573E;
+        }
+        .fontp1 {
+            font-size: 0.9375rem;
+            text-align: left;
+        }
+        .leftcol {
+            padding-left: 0px; 
+            padding-right: 0px; 
+            text-align: right;
+        }
+        .square-img {
+            width: 1.0625rem;
+            height: 1.0625rem;
+            margin-right: 0.7rem;
+        }
+        .modifyrow {
+            padding-top: 20px;
+            padding-bottom: 10px;
+            background: #FFF;
+            border-top: 1rem solid #f0f0f0;
+        }
+        .date-time {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 5px;
+        }
+        .horizontal-line {
+            border-top: 1px solid #f0f0f0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .modifyimg {
+            width: 5.625rem;
+            height: 5.625rem;
+        }.rightcss {
+            text-align: left;
+            padding-left: 0.7rem;
+        } .p-bot {
+            margin-bottom: 3px;
+            font-size: 0.875rem;
+            color: #333333;
+        }
+        .p-bot-1 {
+            margin-bottom: 3px;
+            font-size: 0.875rem;
+            color: #999999;
+        }
+        .p-bot-2 {
+            margin-bottom: 3px;
+            font-size: 1rem;
+            color: #FF7800;
+        }
+       
+        .header-css {
+            background-image: linear-gradient(to right, #4EBDFF, #6093FF);
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .header-css1 {
+            background: #FFF;
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+        }
+        
+        .header-img {
+            width: 0.5625rem;
+            height: 1.03125rem;
+        }
+        .circle-img {
+            width: 1.125rem;
+            height: 1.2375rem;
+            margin-right: 5px;
+        }
+       
+       
+        .row1 {
+            margin-top: -20px; 
+        }
+        .footerCss {
+            background: #F9F9F9;
+            margin-left: 0px;
+            margin-right: 0px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .footerImg {
+            width: 40px; 
+            height: 40px;
+            margin-top: 0.5rem;
+        }
+        .tabActive {
+            color: #0FA9FE;
+            font-size: 0.9375rem;
+        }
+        .tabNoA {
+            color: #333333;
+            font-size: 0.9375rem;
+        }
+        .tabLine {
+            display: flex; 
+            justify-content: center; 
+        }
+        .tablinein {
+            background: #00A4FF; 
+            height: 3px; 
+            width: 65px;
+        }
+        .tablineinElse {
+            height: 3px; 
+            width: 65px;
+        }
+        .title-txt {
+            color: #FFF;
+            font-size: 1.03125rem;
+        }
+      
+        .common-tab {
+            width: 5rem;
+            border: 1px solid #999999;
+            border-radius: 2rem;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-right: 0.5rem;
+            font-size:  0.875rem;
+            color: #999999;
+        }
+        .common-tab1 {
+            width: 4.8rem;
+            border: 1px solid #999999;
+            border-radius: 2rem;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size:  0.875rem;
+            color: #999999;
+        }
+        .common-tab2 {
+            width: 4.8rem;
+            border: 1px solid #999999;
+            border-radius: 2rem;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size:  0.875rem;
+            color: #999999;
+            margin-left: 0.5rem;
+        }
+        .tabgroup {
+            display: flex; 
+            margin-left: 1rem; 
+        }
+        .tabgroup1 {
+            display: flex; 
+            justify-content: space-between;
+        }
+        .tabgroup2 {
+            display: flex; 
+            justify-content: flex-end;
+        }
+        .tabrow {
+            align-items: center;
+            padding: 0.7rem 0rem 0.7rem 1rem; 
+        }
+        
+    }
   
 </style>
