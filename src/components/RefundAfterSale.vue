@@ -225,5 +225,158 @@ export default {
         }
         
     }
+
+    @media screen and (max-width: 1366px) {
+        .my-new {
+            width: 100%;
+            max-width: 100%;
+        }
+        .text-css {
+            color: #0FA9FE;
+        }
+        .chtextimg {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+        .leftcol {
+            padding-left: 0px; 
+            padding-right: 0px; 
+            /* text-align: right; */
+            font-size: 0.9375rem;
+        }
+        .modifyrow {
+            padding-top: 20px;
+            padding-bottom: 10px;
+            background: #FFF;
+            border-top: 1rem solid #f0f0f0;
+        }
+        .horizontal-line {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            align-items: center;
+        }
+        .modifyimg {
+            width: 5.625rem;
+            height: 5.625rem;
+        }.rightcss {
+            text-align: left;
+            padding-left: 0px;
+        } .p-bot {
+            margin-bottom: 3px;
+            font-size: 0.875rem;
+            color: #333333;
+        }
+        .p-bot-1 {
+            margin-bottom: 3px;
+            font-size: 0.875rem;
+            color: #999999;
+        }
+        .p-bot-2 {
+            margin-bottom: 3px;
+            font-size: 1rem;
+            color: #FF7800;
+        }
+       
+        .header-css {
+            background-image: linear-gradient(to right, #4EBDFF, #6093FF);
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .header-css1 {
+            background: #FFF;
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+        }
+        
+        .header-img {
+            width: 0.5625rem;
+            height: 1.03125rem;
+        }
+       
+       
+        .row1 {
+            margin-top: -20px; 
+        }
+        .footerCss {
+            background: #F9F9F9;
+            margin-left: 0px;
+            margin-right: 0px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .footerImg {
+            width: 40px; 
+            height: 40px;
+            margin-top: 0.5rem;
+        }
+        .tabActive {
+            color: #0FA9FE;
+            font-size: 0.9375rem;
+        }
+        .tabNoA {
+            color: #333333;
+            font-size: 0.9375rem;
+        }
+        .tabLine {
+            display: flex; 
+            justify-content: center; 
+        }
+        .tablinein {
+            background: #00A4FF; 
+            height: 3px; 
+            width: 65px;
+        }
+        .tablineinElse {
+            height: 3px; 
+            width: 65px;
+        }
+        .title-txt {
+            color: #FFF;
+            font-size: 1.03125rem;
+        }
+        .common-tab {
+            width: 4.8rem;
+            border: 1px solid #EC632C;
+            border-radius: 2rem;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size:  0.78rem;
+            color: #EC632C;
+        }
+        .common-tab1 {
+            width: 4.8rem;
+            border: 1px solid #999999;
+            border-radius: 2rem;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size:  0.78rem;
+            color: #999999;
+            margin-right: 0.5rem;
+        }
+        .common-tab2 {
+            width: 4.8rem;
+            border: 1px solid #999999;
+            border-radius: 2rem;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size:  0.875rem;
+            color: #999999;
+            margin-left: 0.5rem;
+        }
+        .tabgroup1 {
+            display: flex; 
+            justify-content: flex-end;
+        }
+        .tabgroup2 {
+            display: flex; 
+            justify-content: flex-end;
+        }
+        
+    }
   
 </style>
