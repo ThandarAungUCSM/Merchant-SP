@@ -239,7 +239,8 @@ export default {
             height: 1.25rem;
         }
         .leftcol {
-            padding-left: 0px; 
+            text-align: left;
+            padding-left: 15px; 
             padding-right: 0px; 
             /* text-align: right; */
             font-size: 0.9375rem;
