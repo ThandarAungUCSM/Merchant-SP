@@ -98,5 +98,51 @@ export default {
         }
         
     }
+
+    @media screen and (max-width: 1366px) and (min-width: 768px) {
+        .container {
+            width: 100%;
+            max-width: 100%;
+        }
+        .col12 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .text1 {
+            color: #000000;
+            font-size: 1.25rem;
+            text-align: left;
+        }
+        .text2 {
+            text-align: left;
+            font-size: 0.9375rem;
+            color: #666666;
+            line-height: 2;
+        }
+        .datecss {
+            color: #888888;
+            font-size: 0.75rem;
+            text-align: left;
+        }
+        .row1 {
+            padding-top: 10px;
+            border-bottom: 1px solid #F1F1F1;
+        }
+       
+        .content-img {
+            /* width: 23.4375rem; */
+            width: 100%;
+            height: 17.59375rem;
+        }
+        .img-fullwidth {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .row2 {
+            padding-top: 10px;
+            margin-bottom: 2.5rem;
+        }
+        
+    }
   
 </style>
