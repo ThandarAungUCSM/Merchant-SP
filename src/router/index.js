@@ -62,40 +62,10 @@ const router = new Router({
             component: MyProfile
           },
           {
-            path: '/change-ph-no',
-            name: 'ChangePhoneNo',
-            component: ChangePhoneNo
-          },//chitsu
-          {
-            path: '/change-shop-name',
-            name: 'ChangeShopName',
-            component: ChangeShopName
-          },//chitsu
-          {
-            path: '/find-password',
-            name: 'FindMyPassword',
-            component: FindMyPassword
-          },//myatsu
-          {
-            path: '/change-shop-info',
-            name: 'ChangeShopInfo',
-            component: ChangeShopInfo
-          },//myatsu (including popup)
-          {
-            path: '/view-detail',
-            name: 'ViewDetailMyatSu',
-            component: ViewDetailMyatSu
-          },//myatsu
-          {
-            path: '/forget-password',
-            name: 'ForgetPassword',
-            component: ForgetPassword
-          },//error
-          {
             path: '/modifying-attribute',
             name: 'ModifyingAttribute',
             component: ModifyingAttribute
-          },
+          },//
           {
             path: '/ship',
             name: 'Ship',
@@ -195,7 +165,37 @@ const router = new Router({
             path: '/add-shipping-address',
             name: 'AddShippingAddress',
             component: AddShippingAddress
-          }
+          },
+          {
+            path: '/change-ph-no',
+            name: 'ChangePhoneNo',
+            component: ChangePhoneNo
+          },//chitsu
+          {
+            path: '/change-shop-name',
+            name: 'ChangeShopName',
+            component: ChangeShopName
+          },//chitsu
+          {
+            path: '/find-password',
+            name: 'FindMyPassword',
+            component: FindMyPassword
+          },//myatsu
+          {
+            path: '/change-shop-info',
+            name: 'ChangeShopInfo',
+            component: ChangeShopInfo
+          },//myatsu (including popup)
+          {
+            path: '/view-detail',
+            name: 'ViewDetailMyatSu',
+            component: ViewDetailMyatSu
+          },//myatsu
+          {
+            path: '/forget-password',
+            name: 'ForgetPassword',
+            component: ForgetPassword
+          }//error
           
       ]
     }
