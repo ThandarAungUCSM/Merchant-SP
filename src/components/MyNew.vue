@@ -49,7 +49,6 @@
     <div>
         <commonFooter :bgcolor='myNew'> </commonFooter>
     </div>
-    
   </b-container>
 </template>
 
@@ -163,6 +162,192 @@ export default {
             top: -5px;
             position: absolute;
             right: -1px;
+            color: #FFF;
+        }
+        
+    }
+
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .container {
+            width: 100%;
+            max-width: 100%;
+        }
+        .right-txt {
+            font-size: 0.75rem;
+            color: #A3A3A3;
+        }
+        .row-txt {
+            font-size: 0.9375rem;
+            color: #A3A3A3;
+        }
+        .left-txt {
+            font-size: 1.0625rem;
+            color: #333333;
+        }
+        .img-col {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+        .number-css {
+            font-size: 0.5rem;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .header-css1 {
+            background: #FFF;
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+        }
+        .body-css {
+            padding-top: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .row-img {
+            width: 50px;
+            height: 50px;
+        }
+        .row1-txt-inner {
+            display: flex; 
+            justify-content: space-between;
+        }
+        .divtopbot {
+            padding-top: 1rem;
+            padding-bottom: 5rem;
+        }
+        .row-horizontal-line {
+            background: #F0F0F0;
+        }
+        .horizontal-line {
+            width: 100%; 
+            height: 1px; 
+            margin-top: 10px;
+            background: #EFEFEE;
+        }
+        .tabActive {
+            color: #0FA9FE;
+        }
+        .tabNoA {
+            color: #333333;
+        }
+        .tabLine {
+            display: flex; 
+            justify-content: center; 
+        }
+        .tablinein {
+            background: #00A4FF; 
+            height: 3px; 
+            width: 65px;
+        }
+        .tablineinElse {
+            height: 3px; 
+            width: 65px;
+        }
+        .circle {
+            width: 0.875rem;
+            height: 0.875rem;
+            background: #F23B3C; 
+            border-radius: 0.437rem; 
+            top: -5px;
+            position: absolute;
+            right: 30px;
+            color: #FFF;
+        }
+        
+    }
+
+
+    @media screen and (max-width: 1366px) and (min-width: 1024px) {
+        .container {
+            width: 100%;
+            max-width: 100%;
+        }
+        .right-txt {
+            font-size: 0.75rem;
+            color: #A3A3A3;
+        }
+        .row-txt {
+            font-size: 0.9375rem;
+            color: #A3A3A3;
+        }
+        .left-txt {
+            font-size: 1.0625rem;
+            color: #333333;
+        }
+        .img-col {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+        .number-css {
+            font-size: 0.5rem;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .header-css1 {
+            background: #FFF;
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+        }
+        .body-css {
+            padding-top: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .row-img {
+            width: 50px;
+            height: 50px;
+        }
+        .row1-txt-inner {
+            display: flex; 
+            justify-content: space-between;
+        }
+        .divtopbot {
+            padding-top: 1rem;
+            padding-bottom: 5rem;
+        }
+        .row-horizontal-line {
+            background: #F0F0F0;
+        }
+        .horizontal-line {
+            width: 100%; 
+            height: 1px; 
+            margin-top: 10px;
+            background: #EFEFEE;
+        }
+        .tabActive {
+            color: #0FA9FE;
+        }
+        .tabNoA {
+            color: #333333;
+        }
+        .tabLine {
+            display: flex; 
+            justify-content: center; 
+        }
+        .tablinein {
+            background: #00A4FF; 
+            height: 3px; 
+            width: 65px;
+        }
+        .tablineinElse {
+            height: 3px; 
+            width: 65px;
+        }
+        .circle {
+            width: 0.875rem;
+            height: 0.875rem;
+            background: #F23B3C; 
+            border-radius: 0.437rem; 
+            top: -5px;
+            position: absolute;
+            right: 50px;
             color: #FFF;
         }
         

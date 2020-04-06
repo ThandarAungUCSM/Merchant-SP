@@ -79,48 +79,96 @@ export default {
 
 
 <style scoped>
-    .rightcol {
-        color: #FFF;
-        text-align: right;
+    @media screen and (max-width: 767px) {
+        .rightcol {
+            color: #FFF;
+            text-align: right;
+        }
+        .header-css {
+            background-image: linear-gradient(to right, #4EBDFF, #6093FF);
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            /* margin-left: 0px;
+            margin-right: 0px; */
+        }
+        .header-css1 {
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #F7F7F7;
+        }
+        .header-img {
+            width: 0.5625rem;
+            height: 1.03125rem;
+        }
+        .title-txt {
+            color: #FFF;
+            font-size: 1.03125rem;
+        }
+        .title-txt-ship {
+            color: #FFF;
+            font-size: 1.125rem;
+        }
+        .title-txt-ship-calendar {
+            color: #333333;
+            font-size: 1.125rem;
+        }
+        .left-arrow-pos {
+            text-align: left;
+            /* padding-right: 0px; */
+        }
+        .shipAddress {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
     }
-    .header-css {
-        background-image: linear-gradient(to right, #4EBDFF, #6093FF);
-        display: flex;
-        align-items: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        /* margin-left: 0px;
-        margin-right: 0px; */
-    }
-    .header-css1 {
-        display: flex;
-        align-items: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #F7F7F7;
-    }
-    .header-img {
-        width: 0.5625rem;
-        height: 1.03125rem;
-    }
-    .title-txt {
-        color: #FFF;
-        font-size: 1.03125rem;
-    }
-    .title-txt-ship {
-        color: #FFF;
-        font-size: 1.125rem;
-    }
-    .title-txt-ship-calendar {
-        color: #333333;
-        font-size: 1.125rem;
-    }
-    .left-arrow-pos {
-        text-align: left;
-        /* padding-right: 0px; */
-    }
-    .shipAddress {
-        padding-left: 0px;
-        padding-right: 0px;
+    @media screen and (max-width: 1366px) {
+        .rightcol {
+            color: #FFF;
+            text-align: right;
+        }
+        .header-css {
+            background-image: linear-gradient(to right, #4EBDFF, #6093FF);
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            /* margin-left: 0px;
+            margin-right: 0px; */
+        }
+        .header-css1 {
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #F7F7F7;
+        }
+        .header-img {
+            width: 0.5625rem;
+            height: 1.03125rem;
+        }
+        .title-txt {
+            color: #FFF;
+            font-size: 1.03125rem;
+        }
+        .title-txt-ship {
+            color: #FFF;
+            font-size: 1.125rem;
+        }
+        .title-txt-ship-calendar {
+            color: #333333;
+            font-size: 1.125rem;
+        }
+        .left-arrow-pos {
+            text-align: left;
+            /* padding-right: 0px; */
+        }
+        .shipAddress {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
     }
 </style>

@@ -252,7 +252,7 @@ export default {
             this.$HTTP(this.$httpConfig.parseReqByPassword, {
                 password: this.ruleForm2.pass,
                 password_again: this.ruleForm2.checkPass,
-                code: this.ruleForm2.check_code
+                mobile: this.ruleForm2.check_code
             })
                 .then(res => {
                     this.$message({
@@ -262,6 +262,7 @@ export default {
                     this.close();
                 })
                 .catch(res => {
+                    alert(res.data.message)
                     this.$message({
                         message: res.data.message,
                         type: "error"
