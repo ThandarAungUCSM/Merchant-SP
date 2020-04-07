@@ -45,10 +45,9 @@
             title="找回密码"
             :visible.sync="dialogVisible"
             :before-close="close"
-            width="100%"
-            top="20%"
+            width="400px"
+            top="15%"
         >
-          <div style="padding: 0 !important;" class="el-dialog__body">
             <el-form
                 :model="ruleForm2"
                 status-icon
@@ -111,7 +110,6 @@
                     >
                 </div>
             </el-form>
-          </div>
         </el-dialog>
   </b-container>
 </template>
@@ -416,23 +414,6 @@ export default {
 
 <style scoped>
     @media screen and (max-width: 767px) {
-      el-dialog__body {
-         padding: 30px 10px !important;
-        color: #606266;
-        font-size: 14px;
-        word-break: break-all;
-      }
-      .el-dialog__body {
-         padding: 30px 10px !important;
-        color: #606266;
-        font-size: 14px;
-        word-break: break-all;
-      }
-      .demo-ruleForm{
-        padding-top: 30px !important;
-        padding-bottom: 30px !important;
-        width: 100%;
-      }
         .user{
           font-size: .26rem;
           padding: 1rem 0;
@@ -482,8 +463,7 @@ export default {
         }
         .eye-img{
             height: .5rem;
-          margin: .5rem 0 0 1rem;
-
+            margin: .5rem 0 0 1rem;
         }
         .openeye-img {
             height: .8rem;
@@ -536,23 +516,6 @@ export default {
         width: 100%;
         max-width: 100%;
       }
-      el-dialog__body {
-        padding: 30px 10px !important;
-        color: #606266;
-        font-size: 14px;
-        word-break: break-all;
-      }
-      .el-dialog__body {
-        padding: 30px 10px !important;
-        color: #606266;
-        font-size: 14px;
-        word-break: break-all;
-      }
-      .demo-ruleForm{
-        padding-top: 30px !important;
-        padding-bottom: 30px !important;
-        width: 100%;
-      }
       .user{
         font-size: .26rem;
         padding: 1rem 0;
@@ -600,9 +563,7 @@ export default {
       input:-webkit-autofill {
             -webkit-text-fill-color: #F0F0F0 !important;
       }
-        input:-internal-autofill-selected {
-            background-color: #F0F0F0 !important;
-        }
+     
       .eye-img{
         height: .5rem;
         margin: .5rem 0 0 1rem;
