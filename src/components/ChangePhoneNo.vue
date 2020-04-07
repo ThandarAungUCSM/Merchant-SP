@@ -52,7 +52,7 @@ export default {
         font-size: 15.8px;
       }
 
-      }
+
       .shop-name{
         border-top: 1rem solid #f1f1f1;
         background:#ffffff;
@@ -94,5 +94,66 @@ export default {
         background: #FFF;
 
       }
+    }
+    @media screen and (max-width: 1366px) and (min-width: 768px) {
+      .container {
+        width: 100%;
+        max-width: 100%;
+      }
+      .shop-change{
 
+      }
+      .change-shop{
+        display: flex;
+        background:#46CEFE;
+        padding-top: 17px;
+        padding-bottom: 17px;
+        align-items: center;
+        color: #F1F1F1;
+        font-size: 15.8px;
+      }
+
+
+      .shop-name{
+        border-top: 1rem solid #f1f1f1;
+        background:#ffffff;
+        font-size: 17px;
+        display: flex;
+        text-align:left;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      .ch-image{
+        text-align: right;
+      }
+      .change-img{
+        height: 20px;
+        background:#ffffff;
+      }
+      .click-button{
+        background:#f1f1f1;
+        padding-top: 15px;
+        border-top: 1rem solid #f1f1f1;
+      }
+      .click-me{
+        font-size: 20px;
+        color: #707070;
+        border: none;
+        border-radius: 3px;
+        background: #23B8FF;
+        width: 100%;
+        outline: none;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-left: 15px;
+        margin-right:15px;
+      }
+
+      .text {
+        border: none;
+        outline: none;
+        background: #FFF;
+
+      }
+    }
 </style>

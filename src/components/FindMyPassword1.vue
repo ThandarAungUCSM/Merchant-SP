@@ -51,10 +51,8 @@ export default {
 <style scoped>
 
 @media screen and (max-width: 767px) {
-
   .find_password{
     background-color: #f0f0f0;
-    width: 100%;
   }
   .backlogin{
     text-align: center;  
@@ -95,68 +93,6 @@ export default {
     font-size: 1.15rem;
   }
   
-}
-
-@media screen and (max-width: 1366px) and (min-width: 768px) {
-  .container {
-    width: 100%;
-    max-width: 100%;
-  }
-  .row {
-   /* display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;*/
-    margin-right: -15px !important;
-    margin-left: -15px !important;
-  }
-  .password{
-    width: 100%;
-    max-width: 100%;
-  }
-  .find_password{
-    background-color: #f0f0f0;
-    width: 100%;
-  }
-  .backlogin{
-    text-align: center;
-  }
-  .logtext{
-    color: #bcbcbc;
-    padding: 1.2rem 1.5rem 0.3rem 1.5rem;
-    font-size: 0.85rem;
-  }
-  .message{
-    background: #ffffff;
-    width: 100%;
-    text-align: left;
-    padding: 0.3rem 0.7rem 0rem 0.7rem;
-    color: #bcbcbc;
-    margin-bottom: 1rem;
-  }
-  .message img{
-    padding: 0 0 0.5rem 0;
-  }
-  .shortpassword{
-    padding: 0.4rem 0 0.02rem 0;
-  }
-  .shortpassword span{
-    float: right;
-    border: 0.08rem solid;
-    border-radius: 2rem;
-    padding: 0.25rem 0.6rem 0.25rem 0.6rem;
-    color: #a1d2fe !important;
-  }
-  button{
-    width:90%;
-    padding: 1rem 1.2rem 1rem 1.2rem;
-    background: #23b8ff;
-    border: none;
-    color:#82d2ff;
-    border-radius: 0.2rem;
-    font-size: 1.15rem;
-  }
 }
 
   

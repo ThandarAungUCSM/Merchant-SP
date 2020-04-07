@@ -31,7 +31,7 @@ import calendar1 from '@/components/calendar1'
 import calendar2 from '@/components/calendar2'
 
 import FindMyPassword from '@/components/FindMyPassword'
-import ViewDetailMyatSu from '@/components/ViewDetailMyatSu'
+import ViewDetail from '@/components/ViewDetail'
 import ForgetPassword from '@/components/ForgotPassword'
 
 Vue.use(Router)
@@ -167,30 +167,30 @@ const router = new Router({
             component: AddShippingAddress
           },// need to hide popup when click other place
           {
-            path: '/change-ph-no',
-            name: 'ChangePhoneNo',
-            component: ChangePhoneNo
-          },//chitsu
-          {
-            path: '/change-shop-name',
-            name: 'ChangeShopName',
-            component: ChangeShopName
-          },//chitsu
+            path: '/view-detail',
+            name: 'ViewDetail',
+            component: ViewDetail
+          },//myatsu // khaing yee mon //thandaraung
           {
             path: '/find-password',
             name: 'FindMyPassword',
             component: FindMyPassword
-          },//myatsu
+          },//myatsu // khaing yee mon
+          {
+            path: '/change-ph-no',
+            name: 'ChangePhoneNo',
+            component: ChangePhoneNo
+          },//chitsu // khaing yee mon
+          {
+            path: '/change-shop-name',
+            name: 'ChangeShopName',
+            component: ChangeShopName
+          },//chitsu // khaing yee mon
           {
             path: '/change-shop-info',
             name: 'ChangeShopInfo',
             component: ChangeShopInfo
-          },//myatsu (including popup)
-          {
-            path: '/view-detail',
-            name: 'ViewDetailMyatSu',
-            component: ViewDetailMyatSu
-          },//myatsu
+          },//myatsu // khaing yee mon
           {
             path: '/forget-password',
             name: 'ForgetPassword',

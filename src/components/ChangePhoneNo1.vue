@@ -1,9 +1,9 @@
 <template>
   <b-container  class="shop-change">
-    <commonHeader :changeshop='changeshopname'></commonHeader>
+    <commonHeader :phoneNo='changephno'></commonHeader>
     <b-row class="shop-name">
         <b-col>
-          <input class="text" type="text" v-model="shopName" placeholder="小天鹅官方旗舰店">
+          <input class="text" type="number" v-model="phone" placeholder="18570623665">
         </b-col>
         <b-col class="ch-image">
             <b-img src="/static/images/exit.png" class="change-img" />
@@ -21,8 +21,8 @@ export default {
   name: 'ChangePhNo',
   data () {
     return {
-      shopName: '',
-      changeshopname: 'changeshopname'
+      phone: null,
+      changephno: 'changephno'
     }
   },
   components: {
@@ -52,10 +52,10 @@ export default {
         font-size: 15.8px;
       }
 
-
+      }
       .shop-name{
         border-top: 1rem solid #f1f1f1;
-        background: #FFF;
+        background:#ffffff;
         font-size: 17px;
         display: flex;
         text-align:left;
@@ -71,7 +71,8 @@ export default {
       }
       .click-button{
         background:#f1f1f1;
-        padding-top: 35px;
+        padding-top: 15px;
+        border-top: 1rem solid #f1f1f1;
       }
       .click-me{
         font-size: 20px;
@@ -84,7 +85,7 @@ export default {
         padding-top: 15px;
         padding-bottom: 15px;
         margin-left: 15px;
-        margin-right: 15px;
+        margin-right:15px;
       }
       
         .text {
@@ -93,65 +94,5 @@ export default {
         background: #FFF;
 
       }
-    }
-    @media screen and (max-width: 1366px) and (min-width: 768px) {
-      .container {
-        width: 100%;
-        max-width: 100%;
-      }
-      .shop-change{
 
-      }
-      .change-shop{
-        display: flex;
-        background:#46CEFE;
-        padding-top: 17px;
-        padding-bottom: 17px;
-        align-items: center;
-        color: #F1F1F1;
-        font-size: 15.8px;
-      }
-
-
-      .shop-name{
-        border-top: 1rem solid #f1f1f1;
-        background: #FFF;
-        font-size: 17px;
-        display: flex;
-        text-align:left;
-        padding-top: 15px;
-        padding-bottom: 15px;
-      }
-      .ch-image{
-        text-align: right;
-      }
-      .change-img{
-        height: 20px;
-        background:#ffffff;
-      }
-      .click-button{
-        background:#f1f1f1;
-        padding-top: 35px;
-      }
-      .click-me{
-        font-size: 20px;
-        color: #707070;
-        border: none;
-        border-radius: 3px;
-        background: #23B8FF;
-        width: 100%;
-        outline: none;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        margin-left: 15px;
-        margin-right: 15px;
-      }
-
-      .text {
-        border: none;
-        outline: none;
-        background: #FFF;
-
-      }
-    }
 </style>

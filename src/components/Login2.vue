@@ -437,7 +437,7 @@ export default {
             outline: none;
             font-size: 1rem;
             width: 70%;
-            background: #F0F0F0;
+
         }
         
         .password{
@@ -450,20 +450,12 @@ export default {
             outline: none;
             font-size: 1rem;
             width: 59%;
-            background: #F0F0F0;
-        }
-        input:-webkit-autofill,
-        input:-webkit-autofill:hover, 
-        input:-webkit-autofill:focus, 
-        input:-webkit-autofill:active  {
-                -webkit-box-shadow: 0 0 0 30px #F0F0F0 inset !important;
-        }
-        input:-webkit-autofill {
-            -webkit-text-fill-color: #F0F0F0 !important;
+
         }
         .eye-img{
             height: .5rem;
-            margin: .5rem 0 0 1rem;
+          margin: .5rem 0 0 1rem;
+
         }
         .openeye-img {
             height: .8rem;
@@ -509,108 +501,5 @@ export default {
        /* input{
           background-color: red !important;
         }*/
-    }
-
-    @media screen and (max-width: 1366px) and (min-width: 768px) {
-      .container {
-        width: 100%;
-        max-width: 100%;
-      }
-      .user{
-        font-size: .26rem;
-        padding: 1rem 0;
-        margin: 0 .1rem;
-        border-bottom: .04rem solid #dee2e6;
-      }
-      .pass{
-        font-size: .26rem;
-        padding: 1rem 0;
-        margin: 0 .1rem;
-        border-bottom: .04rem solid #dee2e6;
-      }
-      .username{
-        color: #707070;
-        padding: 0 .8rem 0 0;
-        font-size: 1rem;
-      }
-
-      .text {
-        border: none;
-        outline: none;
-        font-size: 1rem;
-        width: 70%;
-        background: #F0F0F0;
-      }
-
-      .password{
-        color: #707070;
-        font-size: 1rem;
-        padding: 0 2.5rem 0 0;
-      }
-      .text1{
-        border: none;
-        outline: none;
-        font-size: 1rem;
-        width: 59%;
-        background: #F0F0F0;
-      }
-      input:-webkit-autofill,
-      input:-webkit-autofill:hover, 
-      input:-webkit-autofill:focus, 
-      input:-webkit-autofill:active  {
-            -webkit-box-shadow: 0 0 0 30px #F0F0F0 inset !important;
-      }
-      input:-webkit-autofill {
-            -webkit-text-fill-color: #F0F0F0 !important;
-      }
-      .eye-img{
-        height: .5rem;
-        margin: .5rem 0 0 1rem;
-
-      }
-      .openeye-img {
-        height: .8rem;
-        margin: .5rem 0 0 1rem;
-
-      }
-      .footer {
-        color: #000;
-        float: right;
-        font-size: 1rem;
-      }
-
-      .click{
-        background:#f1f1f1;
-        margin: 0 .2rem 0 .2rem;
-      }
-      .click-me{
-        font-size: 1rem;
-        color: white;
-        border: none;
-        background: #23B8FF;
-        width: 100%;
-        outline: none;
-        padding: .8rem 0 .8rem 0;
-        border-radius: .06rem;
-
-      }
-      .forgetpwd {
-        padding: 2rem 0 1rem 0;
-      }
-      .left-col-pos1 {
-        display: flex;
-      }
-      .left-col-pos {
-        display: flex;
-
-        /*align-items: center;*/
-      }
-      .hrcss {
-        border: .02rem solid #EAEAE9;
-        margin: 0 .6rem 0 .6rem;
-      }
-      /* input{
-         background-color: red !important;
-       }*/
     }
 </style>
