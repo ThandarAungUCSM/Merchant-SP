@@ -482,8 +482,7 @@ export default {
         }
         .eye-img{
             height: .5rem;
-          margin: .5rem 0 0 1rem;
-
+            margin: .5rem 0 0 1rem;
         }
         .openeye-img {
             height: .8rem;

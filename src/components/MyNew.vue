@@ -24,7 +24,7 @@
     <b-row class="row-horizontal-line">
         <b-col class="horizontal-line"></b-col>
     </b-row>
-    <div class="divtopbot">
+    <div v-if="tabActive == 'tab1'" class="divtopbot">
         <b-row class="body-css" v-for="(i, index) in 7" :key="index">
             <b-col cols="2" class="img-col">
                 <b-img src="/static/images/Clip.png" class="row-img" />
@@ -46,6 +46,42 @@
             </b-col>
         </b-row>
     </div>
+
+    <div v-if="tabActive == 'tab2'" class="platformdivtopbot">
+        <b-row class="text-center platformbody-css" v-for="(i, index) in 6" :key="index">
+            <b-col cols="2" class="circlecol">
+                <div class="platformcircle">
+                    <b-img src="/static/images/消息 (2).png" class="platformrow-img" />
+                 </div>
+            </b-col>
+            <b-col cols="9" class="platformrow1-txt">
+                <b-row class="row1-txt-inner">
+                    <span class="text1">此处是消息标题 </span>
+                    <span class="text2">9月24日</span>
+                </b-row>
+                <b-row class="txtcss">
+                    <span class="text3">此处是消息内容围绕着设计人群及泛台中...</span>
+                </b-row>
+                <b-row>
+                    <b-col class="horizontal-line"></b-col>
+                </b-row>
+            </b-col>
+        </b-row>
+    </div>
+    <!-- <b-row class="footerCss">
+      <b-col>
+        <b-img src="/static/images/group.png" class="footerImg" alt="Transparent image"></b-img>       
+        <p class="row3-p">首页</p>
+      </b-col> 
+      <b-col>
+        <b-img src="/static/images/group.png" class="footerImg" alt="Transparent image"></b-img>
+        <p class="row3-p">消息 </p>
+      </b-col>
+      <b-col>
+        <b-img src="/static/images/group.png" class="footerImg" alt="Transparent image"></b-img>
+        <p class="row3-p">我的 </p>
+      </b-col> 
+    </b-row> -->
     <div>
         <commonFooter :bgcolor='myNew'> </commonFooter>
     </div>
@@ -80,6 +116,45 @@ export default {
 <style scoped>
 
     @media screen and (max-width: 767px) {
+        .platformdivtopbot {
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+        }
+        .platformbody-css {
+            /* background: #FFF; */
+            padding-top: 15px;
+        }
+        .circlecol {
+            padding-left: 10px;
+        }
+        .platformcircle {
+            background: #5594EF;
+            width: 2.8125rem;
+            height: 2.8125rem;
+            border-radius: 1.40625rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .platformrow-img {
+            width: 1.375rem;
+            height:  1.375rem;
+        }
+        .txtcss {
+            text-align: left;
+        }
+        .text3 {
+            font-size: 0.9375rem;
+            color: #A3A3A3;
+        }
+        .text1 {
+            font-size: 1.0625rem;
+            color: #333333;
+        }
+        .text2 {
+            font-size: 0.75rem;
+            color: #A3A3A3;
+        }
         .right-txt {
             font-size: 0.75rem;
             color: #A3A3A3;
@@ -117,6 +192,11 @@ export default {
         .row-img {
             width: 50px;
             height: 50px;
+        }
+        .platformrow1-txt {
+            margin-left: 10px; 
+            margin-right: 10px;
+            padding-right: 10px;
         }
         .row1-txt-inner {
             display: flex; 
@@ -164,11 +244,64 @@ export default {
             right: -1px;
             color: #FFF;
         }
+        .footerCss {
+            background: #F9F9F9;
+            margin-left: 0px;
+            margin-right: 0px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .footerImg {
+            width: 40px; 
+            height: 40px;
+            margin-top: 0.5rem;
+        }
         
     }
 
 
     @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .platformdivtopbot {
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+        }
+        .platformbody-css {
+            /* background: #FFF; */
+            padding-top: 15px;
+        }
+        .circlecol {
+            padding-left: 10px;
+        }
+        .platformcircle {
+            background: #5594EF;
+            width: 2.8125rem;
+            height: 2.8125rem;
+            border-radius: 1.40625rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .platformrow-img {
+            width: 1.375rem;
+            height:  1.375rem;
+        }
+        .txtcss {
+            text-align: left;
+        }
+        .text3 {
+            font-size: 0.9375rem;
+            color: #A3A3A3;
+        }
+        .text1 {
+            font-size: 1.0625rem;
+            color: #333333;
+        }
+        .text2 {
+            font-size: 0.75rem;
+            color: #A3A3A3;
+        }
         .container {
             width: 100%;
             max-width: 100%;
@@ -210,6 +343,11 @@ export default {
         .row-img {
             width: 50px;
             height: 50px;
+        }
+        .platformrow1-txt {
+            margin-left: 10px; 
+            margin-right: 10px;
+            padding-right: 10px;
         }
         .row1-txt-inner {
             display: flex; 
@@ -257,11 +395,64 @@ export default {
             right: 30px;
             color: #FFF;
         }
+        .footerCss {
+            background: #F9F9F9;
+            margin-left: 0px;
+            margin-right: 0px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .footerImg {
+            width: 40px; 
+            height: 40px;
+            margin-top: 0.5rem;
+        }
         
     }
 
 
     @media screen and (max-width: 1366px) and (min-width: 1024px) {
+        .platformdivtopbot {
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+        }
+        .platformbody-css {
+            /* background: #FFF; */
+            padding-top: 15px;
+        }
+        .circlecol {
+            padding-left: 10px;
+        }
+        .platformcircle {
+            background: #5594EF;
+            width: 2.8125rem;
+            height: 2.8125rem;
+            border-radius: 1.40625rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .platformrow-img {
+            width: 1.375rem;
+            height:  1.375rem;
+        }
+        .txtcss {
+            text-align: left;
+        }
+        .text3 {
+            font-size: 0.9375rem;
+            color: #A3A3A3;
+        }
+        .text1 {
+            font-size: 1.0625rem;
+            color: #333333;
+        }
+        .text2 {
+            font-size: 0.75rem;
+            color: #A3A3A3;
+        }
         .container {
             width: 100%;
             max-width: 100%;
@@ -303,6 +494,11 @@ export default {
         .row-img {
             width: 50px;
             height: 50px;
+        }
+        .platformrow1-txt {
+            margin-left: 10px; 
+            margin-right: 10px;
+            padding-right: 10px;
         }
         .row1-txt-inner {
             display: flex; 
@@ -349,6 +545,20 @@ export default {
             position: absolute;
             right: 50px;
             color: #FFF;
+        }
+        .footerCss {
+            background: #F9F9F9;
+            margin-left: 0px;
+            margin-right: 0px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .footerImg {
+            width: 40px; 
+            height: 40px;
+            margin-top: 0.5rem;
         }
         
     }

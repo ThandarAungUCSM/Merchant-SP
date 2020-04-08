@@ -52,11 +52,6 @@ const router = new Router({
             component: Login
           },//chit su
           {
-            path: '/my-new',
-            name: 'MyNew',
-            component: MyNew
-          },
-          {
             path: '/my-profile',
             name: 'MyProfile',
             component: MyProfile
@@ -142,10 +137,15 @@ const router = new Router({
             component: CapitalCenter
           },
           {
+            path: '/my-new',
+            name: 'MyNew',
+            component: MyNew
+          },
+          {
             path: '/message-platform',
             name: 'MessagePlatform',
             component: MessagePlatform
-          },
+          }, // can delete but 
           {
             path: '/message-inner',
             name: 'MessageInner',
