@@ -471,12 +471,12 @@ export default {
             width: 59%;
             background: #F0F0F0;
         }
-        /* input:-webkit-autofill,
+        input:-webkit-autofill,
         input:-webkit-autofill:hover, 
         input:-webkit-autofill:focus, 
         input:-webkit-autofill:active  {
                 -webkit-box-shadow: 0 0 0 30px #F0F0F0 inset !important;
-        } */
+        }
         input:-webkit-autofill {
             -webkit-text-fill-color: #F0F0F0 !important;
         }
@@ -591,12 +591,12 @@ export default {
         width: 59%;
         background: #F0F0F0;
       }
-      /* input:-webkit-autofill,
+      input:-webkit-autofill,
       input:-webkit-autofill:hover, 
       input:-webkit-autofill:focus, 
       input:-webkit-autofill:active  {
             -webkit-box-shadow: 0 0 0 30px #F0F0F0 inset !important;
-      } */
+      }
       input:-webkit-autofill {
             -webkit-text-fill-color: #F0F0F0 !important;
       }
